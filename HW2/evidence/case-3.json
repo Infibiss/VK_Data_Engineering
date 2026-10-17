@@ -1,0 +1,46 @@
+[
+  {
+    "method": "GET",
+    "key": "hw2/it_vacancy_data.csv",
+    "http": 503,
+    "bytes": 162,
+    "error": "SlowDownRead",
+    "message": "Resource requested is unreadable, please reduce your request rate",
+    "sha256_match": false
+  },
+  {
+    "method": "GET",
+    "key": "hw2/vacancy_01.json",
+    "http": 503,
+    "bytes": 162,
+    "error": "SlowDownRead",
+    "message": "Resource requested is unreadable, please reduce your request rate",
+    "sha256_match": false
+  },
+  {
+    "method": "GET",
+    "key": "hw2/vacancy_02.json",
+    "http": 503,
+    "bytes": 162,
+    "error": "SlowDownRead",
+    "message": "Resource requested is unreadable, please reduce your request rate",
+    "sha256_match": false
+  },
+  {
+    "method": "GET",
+    "key": "hw2/vacancy_03.json",
+    "http": 503,
+    "bytes": 162,
+    "error": "SlowDownRead",
+    "message": "Resource requested is unreadable, please reduce your request rate",
+    "sha256_match": false
+  },
+  {
+    "method": "PUT",
+    "key": "hw2/probe-3.json",
+    "http": 503,
+    "bytes": 162,
+    "error": "SlowDownRead",
+    "message": "Resource requested is unreadable, please reduce your request rate"
+  }
+]

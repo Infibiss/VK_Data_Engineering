@@ -1,0 +1,90 @@
+$ python3 scripts/profile.py --mode baseline --repeat 3
+Start baseline attempt 1
+{"mode": "baseline", "attempt": 1, "run_id": "1792248139102909000", "failure_injected": false, "seconds": 6.918519874976482, "peak_rss_mib": 575.46875, "output_dir": "tmp/runs/baseline-1-1792248139102909000", "log": "evidence/baseline-1-1792248139102909000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "baseline", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/baseline-1-1792248139102909000"], "timestamp_utc": "2026-10-17T14:42:26.021514+00:00"}
+Start baseline attempt 2
+{"mode": "baseline", "attempt": 2, "run_id": "1792248146022153000", "failure_injected": false, "seconds": 6.788319000042975, "peak_rss_mib": 574.40625, "output_dir": "tmp/runs/baseline-2-1792248146022153000", "log": "evidence/baseline-2-1792248146022153000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "baseline", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/baseline-2-1792248146022153000"], "timestamp_utc": "2026-10-17T14:42:32.810546+00:00"}
+Start baseline attempt 3
+{"mode": "baseline", "attempt": 3, "run_id": "1792248152810892000", "failure_injected": false, "seconds": 6.784933333983645, "peak_rss_mib": 574.1875, "output_dir": "tmp/runs/baseline-3-1792248152810892000", "log": "evidence/baseline-3-1792248152810892000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "baseline", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/baseline-3-1792248152810892000"], "timestamp_utc": "2026-10-17T14:42:39.596020+00:00"}
+$ python3 scripts/profile.py --mode combiner --repeat 3
+Start combiner attempt 1
+{"mode": "combiner", "attempt": 1, "run_id": "1792248159636796000", "failure_injected": false, "seconds": 6.650712875009049, "peak_rss_mib": 578.21875, "output_dir": "tmp/runs/combiner-1-1792248159636796000", "log": "evidence/combiner-1-1792248159636796000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "combiner", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/combiner-1-1792248159636796000"], "timestamp_utc": "2026-10-17T14:42:46.287856+00:00"}
+Start combiner attempt 2
+{"mode": "combiner", "attempt": 2, "run_id": "1792248166288492000", "failure_injected": false, "seconds": 6.623617750010453, "peak_rss_mib": 583.375, "output_dir": "tmp/runs/combiner-2-1792248166288492000", "log": "evidence/combiner-2-1792248166288492000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "combiner", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/combiner-2-1792248166288492000"], "timestamp_utc": "2026-10-17T14:42:52.912347+00:00"}
+Start combiner attempt 3
+{"mode": "combiner", "attempt": 3, "run_id": "1792248172912643000", "failure_injected": false, "seconds": 6.574539375025779, "peak_rss_mib": 580.546875, "output_dir": "tmp/runs/combiner-3-1792248172912643000", "log": "evidence/combiner-3-1792248172912643000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "combiner", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/combiner-3-1792248172912643000"], "timestamp_utc": "2026-10-17T14:42:59.487439+00:00"}
+$ python3 scripts/profile.py --mode fast --repeat 3
+Start fast attempt 1
+{"mode": "fast", "attempt": 1, "run_id": "1792248179529133000", "failure_injected": false, "seconds": 10.316305749991443, "peak_rss_mib": 1355.984375, "output_dir": "tmp/runs/fast-1-1792248179529133000", "log": "evidence/fast-1-1792248179529133000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "fast", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/fast-1-1792248179529133000"], "timestamp_utc": "2026-10-17T14:43:09.846035+00:00"}
+Start fast attempt 2
+{"mode": "fast", "attempt": 2, "run_id": "1792248189846915000", "failure_injected": false, "seconds": 10.298725709028076, "peak_rss_mib": 1318.984375, "output_dir": "tmp/runs/fast-2-1792248189846915000", "log": "evidence/fast-2-1792248189846915000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "fast", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/fast-2-1792248189846915000"], "timestamp_utc": "2026-10-17T14:43:20.145922+00:00"}
+Start fast attempt 3
+{"mode": "fast", "attempt": 3, "run_id": "1792248200146270000", "failure_injected": false, "seconds": 10.12437445903197, "peak_rss_mib": 1388.734375, "output_dir": "tmp/runs/fast-3-1792248200146270000", "log": "evidence/fast-3-1792248200146270000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "fast", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/fast-3-1792248200146270000"], "timestamp_utc": "2026-10-17T14:43:30.270945+00:00"}
+$ python3 scripts/profile.py --mode fast --chunk-rows 2048 --repeat 3
+Start fast attempt 1
+{"mode": "fast-2048", "attempt": 1, "run_id": "1792248210311719000", "failure_injected": false, "seconds": 10.36849079100648, "peak_rss_mib": 600.484375, "output_dir": "tmp/runs/fast-2048-1-1792248210311719000", "log": "evidence/fast-2048-1-1792248210311719000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "fast", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/fast-2048-1-1792248210311719000", "--chunk-rows", "2048"], "timestamp_utc": "2026-10-17T14:43:40.680515+00:00"}
+Start fast attempt 2
+{"mode": "fast-2048", "attempt": 2, "run_id": "1792248220681059000", "failure_injected": false, "seconds": 10.312732417020015, "peak_rss_mib": 606.8125, "output_dir": "tmp/runs/fast-2048-2-1792248220681059000", "log": "evidence/fast-2048-2-1792248220681059000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "fast", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/fast-2048-2-1792248220681059000", "--chunk-rows", "2048"], "timestamp_utc": "2026-10-17T14:43:50.994197+00:00"}
+Start fast attempt 3
+{"mode": "fast-2048", "attempt": 3, "run_id": "1792248230994560000", "failure_injected": false, "seconds": 10.567368582997005, "peak_rss_mib": 671.40625, "output_dir": "tmp/runs/fast-2048-3-1792248230994560000", "log": "evidence/fast-2048-3-1792248230994560000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "fast", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/fast-2048-3-1792248230994560000", "--chunk-rows", "2048"], "timestamp_utc": "2026-10-17T14:44:01.562196+00:00"}
+$ python3 scripts/profile.py --mode duckdb --repeat 3
+Start duckdb attempt 1
+{"mode": "duckdb", "attempt": 1, "run_id": "1792248241602750000", "failure_injected": false, "seconds": 4.3275164169608615, "peak_rss_mib": 490.546875, "output_dir": "tmp/runs/duckdb-1-1792248241602750000", "log": "evidence/duckdb-1-1792248241602750000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/duckdb_job.py", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/duckdb-1-1792248241602750000"], "timestamp_utc": "2026-10-17T14:44:05.930846+00:00"}
+Start duckdb attempt 2
+{"mode": "duckdb", "attempt": 2, "run_id": "1792248245931583000", "failure_injected": false, "seconds": 4.048566000012215, "peak_rss_mib": 487.375, "output_dir": "tmp/runs/duckdb-2-1792248245931583000", "log": "evidence/duckdb-2-1792248245931583000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/duckdb_job.py", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/duckdb-2-1792248245931583000"], "timestamp_utc": "2026-10-17T14:44:09.980553+00:00"}
+Start duckdb attempt 3
+{"mode": "duckdb", "attempt": 3, "run_id": "1792248249980957000", "failure_injected": false, "seconds": 4.045859207981266, "peak_rss_mib": 491.4375, "output_dir": "tmp/runs/duckdb-3-1792248249980957000", "log": "evidence/duckdb-3-1792248249980957000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/duckdb_job.py", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/duckdb-3-1792248249980957000"], "timestamp_utc": "2026-10-17T14:44:14.027135+00:00"}
+$ python3 scripts/profile.py --mode baseline --repeat 1 --start-at 4
+Start baseline attempt 4
+{"mode": "baseline", "attempt": 4, "run_id": "1792248254069639000", "failure_injected": false, "seconds": 6.774002332997043, "peak_rss_mib": 572.375, "output_dir": "tmp/runs/baseline-4-1792248254069639000", "log": "evidence/baseline-4-1792248254069639000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "baseline", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/baseline-4-1792248254069639000"], "timestamp_utc": "2026-10-17T14:44:20.844032+00:00"}
+$ python3 scripts/profile.py --mode fast --chunk-rows 2048 --repeat 1 --start-at 4
+Start fast attempt 4
+{"mode": "fast-2048", "attempt": 4, "run_id": "1792248260883290000", "failure_injected": false, "seconds": 10.429301582975313, "peak_rss_mib": 633.078125, "output_dir": "tmp/runs/fast-2048-4-1792248260883290000", "log": "evidence/fast-2048-4-1792248260883290000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "fast", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/fast-2048-4-1792248260883290000", "--chunk-rows", "2048"], "timestamp_utc": "2026-10-17T14:44:31.313096+00:00"}
+$ python3 scripts/profile.py --mode fast --chunk-rows 2048 --repeat 1 --inject-failure
+Start fast attempt 1
+{"mode": "fast-2048", "attempt": 1, "run_id": "1792248271356174000", "failure_injected": true, "seconds": 10.422993750020396, "peak_rss_mib": 605.140625, "output_dir": "tmp/runs/fast-2048-1-1792248271356174000-failure", "log": "evidence/fast-2048-1-1792248271356174000-failure.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "fast", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/fast-2048-1-1792248271356174000-failure", "--inject-failure", "--chunk-rows", "2048"], "timestamp_utc": "2026-10-17T14:44:41.779617+00:00"}
+$ python3 scripts/analyze.py 
+variant=9; input_rows=229388; selected_rows=3640
+with_skills=2709; salary_rows=977
+MapReduce vs DuckDB: groups=133691; differences=0
+k=1; distinct=980; occurrences=14760; differences=0
+k=2; distinct=11714; occurrences=46585; differences=0
+k=3; distinct=58848; occurrences=123896; differences=0
+salary_medians_checked=133691; differences=0
+mapper_exit=23; retries=1; frequency_differences=0
+verified_runs=18; winner=baseline; speedup=1.000
+$ python3 scripts/publish.py 
+s3://hh-lake/results/variant9/skills_1.csv: HTTP 200; bytes=26374
+s3://hh-lake/results/variant9/skills_2.csv: HTTP 200; bytes=388277
+s3://hh-lake/results/variant9/skills_3.csv: HTTP 200; bytes=2433695
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Users/infibiss/Desktop/VK/HW3/scripts/run_all.py", line 7, in <module>
+    from common import ROOT
+ModuleNotFoundError: No module named 'common'
+$ python3 scripts/profile.py --mode stream --repeat 3
+Start stream attempt 1
+{"mode": "stream", "attempt": 1, "run_id": "1792248333317605000", "failure_injected": false, "seconds": 6.301147541031241, "peak_rss_mib": 196.671875, "output_dir": "tmp/runs/stream-1-1792248333317605000", "log": "evidence/stream-1-1792248333317605000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "stream", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/stream-1-1792248333317605000"], "timestamp_utc": "2026-10-17T14:45:39.619238+00:00"}
+Start stream attempt 2
+{"mode": "stream", "attempt": 2, "run_id": "1792248339620091000", "failure_injected": false, "seconds": 6.298885750002228, "peak_rss_mib": 202.140625, "output_dir": "tmp/runs/stream-2-1792248339620091000", "log": "evidence/stream-2-1792248339620091000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "stream", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/stream-2-1792248339620091000"], "timestamp_utc": "2026-10-17T14:45:45.919265+00:00"}
+Start stream attempt 3
+{"mode": "stream", "attempt": 3, "run_id": "1792248345919590000", "failure_injected": false, "seconds": 6.287856583017856, "peak_rss_mib": 197.453125, "output_dir": "tmp/runs/stream-3-1792248345919590000", "log": "evidence/stream-3-1792248345919590000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "stream", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/stream-3-1792248345919590000"], "timestamp_utc": "2026-10-17T14:45:52.207763+00:00"}
+$ python3 scripts/profile.py --mode stream --repeat 1 --start-at 4
+Start stream attempt 4
+{"mode": "stream", "attempt": 4, "run_id": "1792248352252556000", "failure_injected": false, "seconds": 6.326456916984171, "peak_rss_mib": 195.875, "output_dir": "tmp/runs/stream-4-1792248352252556000", "log": "evidence/stream-4-1792248352252556000.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "stream", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/stream-4-1792248352252556000"], "timestamp_utc": "2026-10-17T14:45:58.579432+00:00"}
+$ python3 scripts/profile.py --mode stream --repeat 1 --inject-failure
+Start stream attempt 1
+{"mode": "stream", "attempt": 1, "run_id": "1792248358628194000", "failure_injected": true, "seconds": 6.376597375026904, "peak_rss_mib": 197.3125, "output_dir": "tmp/runs/stream-1-1792248358628194000-failure", "log": "evidence/stream-1-1792248358628194000-failure.log", "command": ["/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3", "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py", "--engine", "stream", "--output-dir", "/Users/infibiss/Desktop/VK/HW3/tmp/runs/stream-1-1792248358628194000-failure", "--inject-failure"], "timestamp_utc": "2026-10-17T14:46:05.005179+00:00"}
+$ python3 scripts/analyze.py 
+variant=9; input_rows=229388; selected_rows=3640
+with_skills=2709; salary_rows=977
+MapReduce vs DuckDB: groups=133691; differences=0
+k=1; distinct=980; occurrences=14760; differences=0
+k=2; distinct=11714; occurrences=46585; differences=0
+k=3; distinct=58848; occurrences=123896; differences=0
+salary_medians_checked=133691; differences=0
+mapper_exit=23; retries=1; frequency_differences=0
+verified_runs=23; winner=stream; speedup=1.077
+$ python3 scripts/publish.py 
+s3://hh-lake/results/variant9/skills_1.csv: HTTP 200; bytes=26374
+s3://hh-lake/results/variant9/skills_2.csv: HTTP 200; bytes=388277
+s3://hh-lake/results/variant9/skills_3.csv: HTTP 200; bytes=2433695

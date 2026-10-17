@@ -1,0 +1,14 @@
+$ du -sk volumes/disk*
+42856	volumes/disk1
+42856	volumes/disk2
+42856	volumes/disk3
+42856	volumes/disk4
+disk1: files=43801241 B; allocated files=43884544 B; CSV part.1=43780467 B
+  xl.meta: data=2 parity=2 block=1048576 index=2 distribution=[2, 3, 4, 1]
+disk2: files=43801241 B; allocated files=43884544 B; CSV part.1=43780467 B
+  xl.meta: data=2 parity=2 block=1048576 index=3 distribution=[2, 3, 4, 1]
+disk3: files=43801241 B; allocated files=43884544 B; CSV part.1=43780467 B
+  xl.meta: data=2 parity=2 block=1048576 index=4 distribution=[2, 3, 4, 1]
+disk4: files=43801241 B; allocated files=43884544 B; CSV part.1=43780467 B
+  xl.meta: data=2 parity=2 block=1048576 index=1 distribution=[2, 3, 4, 1]
+CSV: 83 full blocks + 523750 B; logical shard=43777779 B; checksums=2688 B; part.1=43780467 B

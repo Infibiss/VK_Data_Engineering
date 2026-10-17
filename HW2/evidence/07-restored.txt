@@ -1,0 +1,5 @@
+GET it_vacancy_data.csv: HTTP 200; 87555558 B; SHA256 MATCH
+GET vacancy_01.json: HTTP 200; 224 B; SHA256 MATCH
+GET vacancy_02.json: HTTP 200; 845 B; SHA256 MATCH
+GET vacancy_03.json: HTTP 200; 1285 B; SHA256 MATCH
+All 4 drive paths restored; all 4 objects verified.

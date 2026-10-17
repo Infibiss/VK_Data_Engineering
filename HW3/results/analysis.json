@@ -1,0 +1,1045 @@
+{
+  "variant": 9,
+  "student": "Муртазалиев Матвей Асланович",
+  "input_rows": 229388,
+  "selected_rows": 3640,
+  "with_skills": 2709,
+  "salary_rows": 977,
+  "controls": [
+    {
+      "k": 1,
+      "distinct": 980,
+      "occurrences": 14760,
+      "sql_distinct": 980,
+      "sql_occurrences": 14760,
+      "differences": 0
+    },
+    {
+      "k": 2,
+      "distinct": 11714,
+      "occurrences": 46585,
+      "sql_distinct": 11714,
+      "sql_occurrences": 46585,
+      "differences": 0
+    },
+    {
+      "k": 3,
+      "distinct": 58848,
+      "occurrences": 123896,
+      "sql_distinct": 58848,
+      "sql_occurrences": 123896,
+      "differences": 0
+    }
+  ],
+  "top_stacks": [
+    {
+      "k": 1,
+      "skills": [
+        "android"
+      ],
+      "frequency": 1156
+    },
+    {
+      "k": 1,
+      "skills": [
+        "kotlin"
+      ],
+      "frequency": 1063
+    },
+    {
+      "k": 1,
+      "skills": [
+        "ios"
+      ],
+      "frequency": 884
+    },
+    {
+      "k": 1,
+      "skills": [
+        "git"
+      ],
+      "frequency": 820
+    },
+    {
+      "k": 1,
+      "skills": [
+        "swift"
+      ],
+      "frequency": 704
+    },
+    {
+      "k": 2,
+      "skills": [
+        "android",
+        "kotlin"
+      ],
+      "frequency": 777
+    },
+    {
+      "k": 2,
+      "skills": [
+        "ios",
+        "swift"
+      ],
+      "frequency": 556
+    },
+    {
+      "k": 2,
+      "skills": [
+        "android sdk",
+        "kotlin"
+      ],
+      "frequency": 513
+    },
+    {
+      "k": 2,
+      "skills": [
+        "java",
+        "kotlin"
+      ],
+      "frequency": 495
+    },
+    {
+      "k": 2,
+      "skills": [
+        "android",
+        "android sdk"
+      ],
+      "frequency": 458
+    },
+    {
+      "k": 3,
+      "skills": [
+        "android",
+        "android sdk",
+        "kotlin"
+      ],
+      "frequency": 391
+    },
+    {
+      "k": 3,
+      "skills": [
+        "android",
+        "java",
+        "kotlin"
+      ],
+      "frequency": 362
+    },
+    {
+      "k": 3,
+      "skills": [
+        "android sdk",
+        "java",
+        "kotlin"
+      ],
+      "frequency": 289
+    },
+    {
+      "k": 3,
+      "skills": [
+        "android",
+        "android sdk",
+        "java"
+      ],
+      "frequency": 254
+    },
+    {
+      "k": 3,
+      "skills": [
+        "android",
+        "git",
+        "kotlin"
+      ],
+      "frequency": 231
+    }
+  ],
+  "salary_tables": {
+    "2_up": [
+      {
+        "k": 2,
+        "skills": [
+          "ios",
+          "solid"
+        ],
+        "frequency": 66,
+        "n_salary": 26,
+        "base_skills": [
+          "ios"
+        ],
+        "base_frequency": 884,
+        "base_n_salary": 302,
+        "base_median": 150000.0,
+        "median": 212500.0,
+        "delta": 62500.0,
+        "delta_percent": 41.66666666666667
+      },
+      {
+        "k": 2,
+        "skills": [
+          "solid",
+          "ооп"
+        ],
+        "frequency": 46,
+        "n_salary": 20,
+        "base_skills": [
+          "ооп"
+        ],
+        "base_frequency": 296,
+        "base_n_salary": 118,
+        "base_median": 150000.0,
+        "median": 210000.0,
+        "delta": 60000.0,
+        "delta_percent": 39.99999999999999
+      },
+      {
+        "k": 2,
+        "skills": [
+          "solid",
+          "swift"
+        ],
+        "frequency": 50,
+        "n_salary": 20,
+        "base_skills": [
+          "swift"
+        ],
+        "base_frequency": 704,
+        "base_n_salary": 181,
+        "base_median": 170000.0,
+        "median": 220000.0,
+        "delta": 50000.0,
+        "delta_percent": 29.41176470588236
+      }
+    ],
+    "2_down": [
+      {
+        "k": 2,
+        "skills": [
+          "ios",
+          "json api"
+        ],
+        "frequency": 27,
+        "n_salary": 20,
+        "base_skills": [
+          "ios"
+        ],
+        "base_frequency": 884,
+        "base_n_salary": 302,
+        "base_median": 150000.0,
+        "median": 80000.0,
+        "delta": -70000.0,
+        "delta_percent": -46.666666666666664
+      },
+      {
+        "k": 2,
+        "skills": [
+          "kotlin",
+          "mvp"
+        ],
+        "frequency": 64,
+        "n_salary": 20,
+        "base_skills": [
+          "kotlin"
+        ],
+        "base_frequency": 1063,
+        "base_n_salary": 259,
+        "base_median": 180000.0,
+        "median": 110000.0,
+        "delta": -70000.0,
+        "delta_percent": -38.888888888888886
+      },
+      {
+        "k": 2,
+        "skills": [
+          "java",
+          "mvvm"
+        ],
+        "frequency": 69,
+        "n_salary": 23,
+        "base_skills": [
+          "java"
+        ],
+        "base_frequency": 584,
+        "base_n_salary": 168,
+        "base_median": 160000.0,
+        "median": 100000.0,
+        "delta": -60000.0,
+        "delta_percent": -37.5
+      }
+    ],
+    "3_up": [
+      {
+        "k": 3,
+        "skills": [
+          "android",
+          "ios",
+          "typescript"
+        ],
+        "frequency": 38,
+        "n_salary": 20,
+        "base_skills": [
+          "android",
+          "ios"
+        ],
+        "base_frequency": 271,
+        "base_n_salary": 135,
+        "base_median": 135000.0,
+        "median": 190000.0,
+        "delta": 55000.0,
+        "delta_percent": 40.74074074074075
+      },
+      {
+        "k": 3,
+        "skills": [
+          "ios",
+          "swift",
+          "ооп"
+        ],
+        "frequency": 88,
+        "n_salary": 40,
+        "base_skills": [
+          "ios",
+          "swift"
+        ],
+        "base_frequency": 556,
+        "base_n_salary": 144,
+        "base_median": 160000.0,
+        "median": 195000.0,
+        "delta": 35000.0,
+        "delta_percent": 21.875
+      },
+      {
+        "k": 3,
+        "skills": [
+          "android sdk",
+          "git",
+          "kotlin"
+        ],
+        "frequency": 186,
+        "n_salary": 46,
+        "base_skills": [
+          "android sdk",
+          "kotlin"
+        ],
+        "base_frequency": 513,
+        "base_n_salary": 118,
+        "base_median": 155000.0,
+        "median": 187500.0,
+        "delta": 32500.0,
+        "delta_percent": 20.967741935483875
+      }
+    ],
+    "3_down": [
+      {
+        "k": 3,
+        "skills": [
+          "java",
+          "kotlin",
+          "mvvm"
+        ],
+        "frequency": 65,
+        "n_salary": 22,
+        "base_skills": [
+          "java",
+          "kotlin"
+        ],
+        "base_frequency": 495,
+        "base_n_salary": 132,
+        "base_median": 160000.0,
+        "median": 100000.0,
+        "delta": -60000.0,
+        "delta_percent": -37.5
+      },
+      {
+        "k": 3,
+        "skills": [
+          "android",
+          "android sdk",
+          "mvvm"
+        ],
+        "frequency": 79,
+        "n_salary": 27,
+        "base_skills": [
+          "android",
+          "android sdk"
+        ],
+        "base_frequency": 458,
+        "base_n_salary": 117,
+        "base_median": 160000.0,
+        "median": 110000.0,
+        "delta": -50000.0,
+        "delta_percent": -31.25
+      },
+      {
+        "k": 3,
+        "skills": [
+          "android",
+          "kotlin",
+          "ооп"
+        ],
+        "frequency": 91,
+        "n_salary": 36,
+        "base_skills": [
+          "android",
+          "kotlin"
+        ],
+        "base_frequency": 777,
+        "base_n_salary": 204,
+        "base_median": 180000.0,
+        "median": 140000.0,
+        "delta": -40000.0,
+        "delta_percent": -22.22222222222222
+      }
+    ]
+  },
+  "salary_eligible_combinations": 152,
+  "regions": [
+    {
+      "region": "Москва",
+      "jobs": 1691,
+      "with_skills": 1216,
+      "salary_jobs": 403,
+      "median_salary": 200000.0
+    },
+    {
+      "region": "Санкт-Петербург",
+      "jobs": 567,
+      "with_skills": 402,
+      "salary_jobs": 149,
+      "median_salary": 160000.0
+    },
+    {
+      "region": "Новосибирск",
+      "jobs": 133,
+      "with_skills": 115,
+      "salary_jobs": 35,
+      "median_salary": 125000.0
+    }
+  ],
+  "regional_stacks": [
+    {
+      "region": "Москва",
+      "k": 1,
+      "skills": [
+        "kotlin"
+      ],
+      "frequency": 481,
+      "share_percent": 28.444707273802482,
+      "n_salary": 101,
+      "median_salary": 250000.0
+    },
+    {
+      "region": "Москва",
+      "k": 2,
+      "skills": [
+        "android",
+        "kotlin"
+      ],
+      "frequency": 337,
+      "share_percent": 19.92903607332939,
+      "n_salary": 80,
+      "median_salary": 245000.0
+    },
+    {
+      "region": "Москва",
+      "k": 3,
+      "skills": [
+        "android",
+        "android sdk",
+        "kotlin"
+      ],
+      "frequency": 158,
+      "share_percent": 9.343583678296866,
+      "n_salary": 35,
+      "median_salary": 230000.0
+    },
+    {
+      "region": "Санкт-Петербург",
+      "k": 1,
+      "skills": [
+        "android"
+      ],
+      "frequency": 177,
+      "share_percent": 31.216931216931215,
+      "n_salary": 62,
+      "median_salary": 160000.0
+    },
+    {
+      "region": "Санкт-Петербург",
+      "k": 2,
+      "skills": [
+        "android",
+        "kotlin"
+      ],
+      "frequency": 131,
+      "share_percent": 23.10405643738977,
+      "n_salary": 38,
+      "median_salary": 177500.0
+    },
+    {
+      "region": "Санкт-Петербург",
+      "k": 3,
+      "skills": [
+        "android",
+        "java",
+        "kotlin"
+      ],
+      "frequency": 69,
+      "share_percent": 12.16931216931217,
+      "n_salary": 24,
+      "median_salary": 160000.0
+    },
+    {
+      "region": "Новосибирск",
+      "k": 1,
+      "skills": [
+        "android"
+      ],
+      "frequency": 42,
+      "share_percent": 31.57894736842105,
+      "n_salary": 10,
+      "median_salary": 150000.0
+    },
+    {
+      "region": "Новосибирск",
+      "k": 2,
+      "skills": [
+        "android",
+        "kotlin"
+      ],
+      "frequency": 24,
+      "share_percent": 18.045112781954884,
+      "n_salary": 7,
+      "median_salary": 150000.0
+    },
+    {
+      "region": "Новосибирск",
+      "k": 3,
+      "skills": [
+        "android",
+        "android sdk",
+        "kotlin"
+      ],
+      "frequency": 10,
+      "share_percent": 7.518796992481203,
+      "n_salary": 4,
+      "median_salary": 175000.0
+    }
+  ],
+  "profiles": [
+    {
+      "mode": "baseline",
+      "trials": [
+        {
+          "mode": "baseline",
+          "attempt": 1,
+          "run_id": "1792248139102909000",
+          "failure_injected": false,
+          "seconds": 6.918519874976482,
+          "peak_rss_mib": 575.46875,
+          "output_dir": "tmp/runs/baseline-1-1792248139102909000",
+          "log": "evidence/baseline-1-1792248139102909000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "baseline",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/baseline-1-1792248139102909000"
+          ],
+          "timestamp_utc": "2026-10-17T14:42:26.021514+00:00"
+        },
+        {
+          "mode": "baseline",
+          "attempt": 2,
+          "run_id": "1792248146022153000",
+          "failure_injected": false,
+          "seconds": 6.788319000042975,
+          "peak_rss_mib": 574.40625,
+          "output_dir": "tmp/runs/baseline-2-1792248146022153000",
+          "log": "evidence/baseline-2-1792248146022153000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "baseline",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/baseline-2-1792248146022153000"
+          ],
+          "timestamp_utc": "2026-10-17T14:42:32.810546+00:00"
+        },
+        {
+          "mode": "baseline",
+          "attempt": 3,
+          "run_id": "1792248152810892000",
+          "failure_injected": false,
+          "seconds": 6.784933333983645,
+          "peak_rss_mib": 574.1875,
+          "output_dir": "tmp/runs/baseline-3-1792248152810892000",
+          "log": "evidence/baseline-3-1792248152810892000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "baseline",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/baseline-3-1792248152810892000"
+          ],
+          "timestamp_utc": "2026-10-17T14:42:39.596020+00:00"
+        },
+        {
+          "mode": "baseline",
+          "attempt": 4,
+          "run_id": "1792248254069639000",
+          "failure_injected": false,
+          "seconds": 6.774002332997043,
+          "peak_rss_mib": 572.375,
+          "output_dir": "tmp/runs/baseline-4-1792248254069639000",
+          "log": "evidence/baseline-4-1792248254069639000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "baseline",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/baseline-4-1792248254069639000"
+          ],
+          "timestamp_utc": "2026-10-17T14:44:20.844032+00:00"
+        }
+      ],
+      "median_seconds": 6.78662616701331,
+      "median_peak_rss_mib": 574.296875,
+      "minimum_seconds": 6.774002332997043,
+      "maximum_seconds": 6.918519874976482
+    },
+    {
+      "mode": "combiner",
+      "trials": [
+        {
+          "mode": "combiner",
+          "attempt": 1,
+          "run_id": "1792248159636796000",
+          "failure_injected": false,
+          "seconds": 6.650712875009049,
+          "peak_rss_mib": 578.21875,
+          "output_dir": "tmp/runs/combiner-1-1792248159636796000",
+          "log": "evidence/combiner-1-1792248159636796000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "combiner",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/combiner-1-1792248159636796000"
+          ],
+          "timestamp_utc": "2026-10-17T14:42:46.287856+00:00"
+        },
+        {
+          "mode": "combiner",
+          "attempt": 2,
+          "run_id": "1792248166288492000",
+          "failure_injected": false,
+          "seconds": 6.623617750010453,
+          "peak_rss_mib": 583.375,
+          "output_dir": "tmp/runs/combiner-2-1792248166288492000",
+          "log": "evidence/combiner-2-1792248166288492000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "combiner",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/combiner-2-1792248166288492000"
+          ],
+          "timestamp_utc": "2026-10-17T14:42:52.912347+00:00"
+        },
+        {
+          "mode": "combiner",
+          "attempt": 3,
+          "run_id": "1792248172912643000",
+          "failure_injected": false,
+          "seconds": 6.574539375025779,
+          "peak_rss_mib": 580.546875,
+          "output_dir": "tmp/runs/combiner-3-1792248172912643000",
+          "log": "evidence/combiner-3-1792248172912643000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "combiner",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/combiner-3-1792248172912643000"
+          ],
+          "timestamp_utc": "2026-10-17T14:42:59.487439+00:00"
+        }
+      ],
+      "median_seconds": 6.623617750010453,
+      "median_peak_rss_mib": 580.546875,
+      "minimum_seconds": 6.574539375025779,
+      "maximum_seconds": 6.650712875009049
+    },
+    {
+      "mode": "fast",
+      "trials": [
+        {
+          "mode": "fast",
+          "attempt": 1,
+          "run_id": "1792248179529133000",
+          "failure_injected": false,
+          "seconds": 10.316305749991443,
+          "peak_rss_mib": 1355.984375,
+          "output_dir": "tmp/runs/fast-1-1792248179529133000",
+          "log": "evidence/fast-1-1792248179529133000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "fast",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/fast-1-1792248179529133000"
+          ],
+          "timestamp_utc": "2026-10-17T14:43:09.846035+00:00"
+        },
+        {
+          "mode": "fast",
+          "attempt": 2,
+          "run_id": "1792248189846915000",
+          "failure_injected": false,
+          "seconds": 10.298725709028076,
+          "peak_rss_mib": 1318.984375,
+          "output_dir": "tmp/runs/fast-2-1792248189846915000",
+          "log": "evidence/fast-2-1792248189846915000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "fast",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/fast-2-1792248189846915000"
+          ],
+          "timestamp_utc": "2026-10-17T14:43:20.145922+00:00"
+        },
+        {
+          "mode": "fast",
+          "attempt": 3,
+          "run_id": "1792248200146270000",
+          "failure_injected": false,
+          "seconds": 10.12437445903197,
+          "peak_rss_mib": 1388.734375,
+          "output_dir": "tmp/runs/fast-3-1792248200146270000",
+          "log": "evidence/fast-3-1792248200146270000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "fast",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/fast-3-1792248200146270000"
+          ],
+          "timestamp_utc": "2026-10-17T14:43:30.270945+00:00"
+        }
+      ],
+      "median_seconds": 10.298725709028076,
+      "median_peak_rss_mib": 1355.984375,
+      "minimum_seconds": 10.12437445903197,
+      "maximum_seconds": 10.316305749991443
+    },
+    {
+      "mode": "fast-2048",
+      "trials": [
+        {
+          "mode": "fast-2048",
+          "attempt": 1,
+          "run_id": "1792248210311719000",
+          "failure_injected": false,
+          "seconds": 10.36849079100648,
+          "peak_rss_mib": 600.484375,
+          "output_dir": "tmp/runs/fast-2048-1-1792248210311719000",
+          "log": "evidence/fast-2048-1-1792248210311719000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "fast",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/fast-2048-1-1792248210311719000",
+            "--chunk-rows",
+            "2048"
+          ],
+          "timestamp_utc": "2026-10-17T14:43:40.680515+00:00"
+        },
+        {
+          "mode": "fast-2048",
+          "attempt": 2,
+          "run_id": "1792248220681059000",
+          "failure_injected": false,
+          "seconds": 10.312732417020015,
+          "peak_rss_mib": 606.8125,
+          "output_dir": "tmp/runs/fast-2048-2-1792248220681059000",
+          "log": "evidence/fast-2048-2-1792248220681059000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "fast",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/fast-2048-2-1792248220681059000",
+            "--chunk-rows",
+            "2048"
+          ],
+          "timestamp_utc": "2026-10-17T14:43:50.994197+00:00"
+        },
+        {
+          "mode": "fast-2048",
+          "attempt": 3,
+          "run_id": "1792248230994560000",
+          "failure_injected": false,
+          "seconds": 10.567368582997005,
+          "peak_rss_mib": 671.40625,
+          "output_dir": "tmp/runs/fast-2048-3-1792248230994560000",
+          "log": "evidence/fast-2048-3-1792248230994560000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "fast",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/fast-2048-3-1792248230994560000",
+            "--chunk-rows",
+            "2048"
+          ],
+          "timestamp_utc": "2026-10-17T14:44:01.562196+00:00"
+        },
+        {
+          "mode": "fast-2048",
+          "attempt": 4,
+          "run_id": "1792248260883290000",
+          "failure_injected": false,
+          "seconds": 10.429301582975313,
+          "peak_rss_mib": 633.078125,
+          "output_dir": "tmp/runs/fast-2048-4-1792248260883290000",
+          "log": "evidence/fast-2048-4-1792248260883290000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "fast",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/fast-2048-4-1792248260883290000",
+            "--chunk-rows",
+            "2048"
+          ],
+          "timestamp_utc": "2026-10-17T14:44:31.313096+00:00"
+        }
+      ],
+      "median_seconds": 10.398896186990896,
+      "median_peak_rss_mib": 619.9453125,
+      "minimum_seconds": 10.312732417020015,
+      "maximum_seconds": 10.567368582997005
+    },
+    {
+      "mode": "stream",
+      "trials": [
+        {
+          "mode": "stream",
+          "attempt": 1,
+          "run_id": "1792248333317605000",
+          "failure_injected": false,
+          "seconds": 6.301147541031241,
+          "peak_rss_mib": 196.671875,
+          "output_dir": "tmp/runs/stream-1-1792248333317605000",
+          "log": "evidence/stream-1-1792248333317605000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "stream",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/stream-1-1792248333317605000"
+          ],
+          "timestamp_utc": "2026-10-17T14:45:39.619238+00:00"
+        },
+        {
+          "mode": "stream",
+          "attempt": 2,
+          "run_id": "1792248339620091000",
+          "failure_injected": false,
+          "seconds": 6.298885750002228,
+          "peak_rss_mib": 202.140625,
+          "output_dir": "tmp/runs/stream-2-1792248339620091000",
+          "log": "evidence/stream-2-1792248339620091000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "stream",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/stream-2-1792248339620091000"
+          ],
+          "timestamp_utc": "2026-10-17T14:45:45.919265+00:00"
+        },
+        {
+          "mode": "stream",
+          "attempt": 3,
+          "run_id": "1792248345919590000",
+          "failure_injected": false,
+          "seconds": 6.287856583017856,
+          "peak_rss_mib": 197.453125,
+          "output_dir": "tmp/runs/stream-3-1792248345919590000",
+          "log": "evidence/stream-3-1792248345919590000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "stream",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/stream-3-1792248345919590000"
+          ],
+          "timestamp_utc": "2026-10-17T14:45:52.207763+00:00"
+        },
+        {
+          "mode": "stream",
+          "attempt": 4,
+          "run_id": "1792248352252556000",
+          "failure_injected": false,
+          "seconds": 6.326456916984171,
+          "peak_rss_mib": 195.875,
+          "output_dir": "tmp/runs/stream-4-1792248352252556000",
+          "log": "evidence/stream-4-1792248352252556000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/mapreduce.py",
+            "--engine",
+            "stream",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/stream-4-1792248352252556000"
+          ],
+          "timestamp_utc": "2026-10-17T14:45:58.579432+00:00"
+        }
+      ],
+      "median_seconds": 6.300016645516735,
+      "median_peak_rss_mib": 197.0625,
+      "minimum_seconds": 6.287856583017856,
+      "maximum_seconds": 6.326456916984171
+    },
+    {
+      "mode": "duckdb",
+      "trials": [
+        {
+          "mode": "duckdb",
+          "attempt": 1,
+          "run_id": "1792248241602750000",
+          "failure_injected": false,
+          "seconds": 4.3275164169608615,
+          "peak_rss_mib": 490.546875,
+          "output_dir": "tmp/runs/duckdb-1-1792248241602750000",
+          "log": "evidence/duckdb-1-1792248241602750000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/duckdb_job.py",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/duckdb-1-1792248241602750000"
+          ],
+          "timestamp_utc": "2026-10-17T14:44:05.930846+00:00"
+        },
+        {
+          "mode": "duckdb",
+          "attempt": 2,
+          "run_id": "1792248245931583000",
+          "failure_injected": false,
+          "seconds": 4.048566000012215,
+          "peak_rss_mib": 487.375,
+          "output_dir": "tmp/runs/duckdb-2-1792248245931583000",
+          "log": "evidence/duckdb-2-1792248245931583000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/duckdb_job.py",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/duckdb-2-1792248245931583000"
+          ],
+          "timestamp_utc": "2026-10-17T14:44:09.980553+00:00"
+        },
+        {
+          "mode": "duckdb",
+          "attempt": 3,
+          "run_id": "1792248249980957000",
+          "failure_injected": false,
+          "seconds": 4.045859207981266,
+          "peak_rss_mib": 491.4375,
+          "output_dir": "tmp/runs/duckdb-3-1792248249980957000",
+          "log": "evidence/duckdb-3-1792248249980957000.log",
+          "command": [
+            "/Users/infibiss/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "/Users/infibiss/Desktop/VK/HW3/scripts/duckdb_job.py",
+            "--output-dir",
+            "/Users/infibiss/Desktop/VK/HW3/tmp/runs/duckdb-3-1792248249980957000"
+          ],
+          "timestamp_utc": "2026-10-17T14:44:14.027135+00:00"
+        }
+      ],
+      "median_seconds": 4.048566000012215,
+      "median_peak_rss_mib": 490.546875,
+      "minimum_seconds": 4.045859207981266,
+      "maximum_seconds": 4.3275164169608615
+    }
+  ],
+  "winner": "stream",
+  "speedup": 1.0772394025090173,
+  "memory_reduction_percent": 65.68630118351244,
+  "mapper_failure": {
+    "engine": "stream",
+    "data_uri": "s3://hh-lake/raw/it_vacancies_2024.csv.gz",
+    "input_rows": 229388,
+    "compressed_bytes": 295480524,
+    "chunk_rows": 32768,
+    "retries": 1,
+    "mapper_exit_code": 23,
+    "selected_rows": 3640,
+    "with_skills": 2709,
+    "salary_rows": 977,
+    "skill_histogram": {
+      "0": 931,
+      "1": 101,
+      "2": 273,
+      "3": 369,
+      "4": 464,
+      "5": 471,
+      "6": 278,
+      "7": 201,
+      "8": 177,
+      "9": 117,
+      "10": 71,
+      "11": 55,
+      "12": 41,
+      "13": 17,
+      "14": 24,
+      "15": 14,
+      "16": 10,
+      "17": 9,
+      "18": 6,
+      "20": 2,
+      "21": 3,
+      "22": 2,
+      "26": 1,
+      "27": 1,
+      "28": 2
+    },
+    "combinations": {
+      "1": {
+        "distinct": 980,
+        "occurrences": 14760
+      },
+      "2": {
+        "distinct": 11714,
+        "occurrences": 46585
+      },
+      "3": {
+        "distinct": 58848,
+        "occurrences": 123896
+      }
+    },
+    "seconds_inside": 6.260660375002772
+  },
+  "verified_runs": 23,
+  "differences": 0,
+  "salary_medians_verified": 133691
+}

@@ -1,0 +1,163 @@
+[
+  {
+    "mode": "baseline",
+    "attempt": 1,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "baseline",
+    "attempt": 2,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "baseline",
+    "attempt": 3,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "combiner",
+    "attempt": 1,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "combiner",
+    "attempt": 2,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "combiner",
+    "attempt": 3,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "fast",
+    "attempt": 1,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "fast",
+    "attempt": 2,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "fast",
+    "attempt": 3,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "fast-2048",
+    "attempt": 1,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "fast-2048",
+    "attempt": 2,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "fast-2048",
+    "attempt": 3,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "duckdb",
+    "attempt": 1,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "duckdb",
+    "attempt": 2,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "duckdb",
+    "attempt": 3,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "baseline",
+    "attempt": 4,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "fast-2048",
+    "attempt": 4,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "fast-2048",
+    "attempt": 1,
+    "failure_injected": true,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "stream",
+    "attempt": 1,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "stream",
+    "attempt": 2,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "stream",
+    "attempt": 3,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "stream",
+    "attempt": 4,
+    "failure_injected": false,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  },
+  {
+    "mode": "stream",
+    "attempt": 1,
+    "failure_injected": true,
+    "frequency_differences": 0,
+    "selected_differences": 0
+  }
+]

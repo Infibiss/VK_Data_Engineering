@@ -1,0 +1,17 @@
+$ mv volumes/disk1 offline/disk1
+$ touch volumes/disk1  # block auto-recreation
+$ mv volumes/disk2 offline/disk2
+$ touch volumes/disk2  # block auto-recreation
+Unavailable drive paths: 2/4
+disk1: Not a directory (confirmed)
+disk2: Not a directory (confirmed)
+$ python3 scripts/s3.py GET hw2/it_vacancy_data.csv
+HTTP 200; bytes=87555558; SHA256 MATCH
+$ python3 scripts/s3.py GET hw2/vacancy_01.json
+HTTP 200; bytes=224; SHA256 MATCH
+$ python3 scripts/s3.py GET hw2/vacancy_02.json
+HTTP 200; bytes=845; SHA256 MATCH
+$ python3 scripts/s3.py GET hw2/vacancy_03.json
+HTTP 200; bytes=1285; SHA256 MATCH
+$ python3 scripts/s3.py PUT hw2/probe-2.json
+HTTP 503; error=ServiceUnavailable

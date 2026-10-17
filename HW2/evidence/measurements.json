@@ -1,0 +1,94 @@
+[
+  {
+    "disk": 1,
+    "apparent_file_bytes": 43801241,
+    "allocated_file_bytes": 43884544,
+    "part_bytes": 43780467,
+    "meta_bytes": 472,
+    "data_shards": 2,
+    "parity_shards": 2,
+    "index": 2,
+    "distribution": [
+      2,
+      3,
+      4,
+      1
+    ],
+    "block_size": 1048576,
+    "object_size": 87555558,
+    "json_meta_bytes": {
+      "vacancy_01.json": 685,
+      "vacancy_03.json": 1222,
+      "vacancy_02.json": 1000
+    }
+  },
+  {
+    "disk": 2,
+    "apparent_file_bytes": 43801241,
+    "allocated_file_bytes": 43884544,
+    "part_bytes": 43780467,
+    "meta_bytes": 472,
+    "data_shards": 2,
+    "parity_shards": 2,
+    "index": 3,
+    "distribution": [
+      2,
+      3,
+      4,
+      1
+    ],
+    "block_size": 1048576,
+    "object_size": 87555558,
+    "json_meta_bytes": {
+      "vacancy_01.json": 685,
+      "vacancy_03.json": 1222,
+      "vacancy_02.json": 1000
+    }
+  },
+  {
+    "disk": 3,
+    "apparent_file_bytes": 43801241,
+    "allocated_file_bytes": 43884544,
+    "part_bytes": 43780467,
+    "meta_bytes": 472,
+    "data_shards": 2,
+    "parity_shards": 2,
+    "index": 4,
+    "distribution": [
+      2,
+      3,
+      4,
+      1
+    ],
+    "block_size": 1048576,
+    "object_size": 87555558,
+    "json_meta_bytes": {
+      "vacancy_01.json": 685,
+      "vacancy_03.json": 1222,
+      "vacancy_02.json": 1000
+    }
+  },
+  {
+    "disk": 4,
+    "apparent_file_bytes": 43801241,
+    "allocated_file_bytes": 43884544,
+    "part_bytes": 43780467,
+    "meta_bytes": 472,
+    "data_shards": 2,
+    "parity_shards": 2,
+    "index": 1,
+    "distribution": [
+      2,
+      3,
+      4,
+      1
+    ],
+    "block_size": 1048576,
+    "object_size": 87555558,
+    "json_meta_bytes": {
+      "vacancy_01.json": 685,
+      "vacancy_03.json": 1222,
+      "vacancy_02.json": 1000
+    }
+  }
+]

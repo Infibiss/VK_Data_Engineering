@@ -1,0 +1,27 @@
+[
+  {
+    "evidence": "01-cluster.jpg",
+    "docx_media": "word/media/image1.jpg",
+    "unaltered": true
+  },
+  {
+    "evidence": "02-objects.jpg",
+    "docx_media": "word/media/image2.jpg",
+    "unaltered": true
+  },
+  {
+    "evidence": "04-loss-1.jpg",
+    "docx_media": "word/media/image3.jpg",
+    "unaltered": true
+  },
+  {
+    "evidence": "05-loss-2.jpg",
+    "docx_media": "word/media/image4.jpg",
+    "unaltered": true
+  },
+  {
+    "evidence": "06-loss-3.jpg",
+    "docx_media": "word/media/image5.jpg",
+    "unaltered": true
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "method": "GET",
+    "key": "hw2/it_vacancy_data.csv",
+    "http": 200,
+    "bytes": 87555558,
+    "sha256": "dadde56cc7e47d4d5294a0933ef26d6abd76db7b7de7503887ab7b252b423dc7",
+    "sha256_match": true
+  },
+  {
+    "method": "GET",
+    "key": "hw2/vacancy_01.json",
+    "http": 200,
+    "bytes": 224,
+    "sha256": "af6be720cae7830ec4eeb48d042556a8d680f2cd7336d58d36ba565038614599",
+    "sha256_match": true
+  },
+  {
+    "method": "GET",
+    "key": "hw2/vacancy_02.json",
+    "http": 200,
+    "bytes": 845,
+    "sha256": "78014b242e3ff72f347b25c12eb907214d0d583984146282772c8b4aee50016e",
+    "sha256_match": true
+  },
+  {
+    "method": "GET",
+    "key": "hw2/vacancy_03.json",
+    "http": 200,
+    "bytes": 1285,
+    "sha256": "12118140a4b5146040fd13452e9ec5d4ef8310160e86b18f0b5e9bc86e44f1ec",
+    "sha256_match": true
+  },
+  {
+    "method": "PUT",
+    "key": "hw2/probe-2.json",
+    "http": 503,
+    "bytes": 144,
+    "error": "ServiceUnavailable",
+    "message": "The service is unavailable. Please retry."
+  }
+]

@@ -1,0 +1,325 @@
+[
+  [
+    "p",
+    "HW2. RustFS и Erasure Coding"
+  ],
+  [
+    "p",
+    "1. Развёртывание и загрузка данных"
+  ],
+  [
+    "p",
+    "05.10.2026. macOS, Apple Silicon (arm64), RustFS 1.0.1. Один узел, один erasure set, четыре папки: <b>HW2/volumes/disk1 - disk4</b>. S3: 127.0.0.1:9000; консоль: 127.0.0.1:9001; bucket: <b>hw2</b>."
+  ],
+  [
+    "p",
+    "Папки находятся на одном SSD. Для предусмотренной заданием локальной модели включён RUSTFS_UNSAFE_BYPASS_DISK_CHECK=true. Это проверка отказов путей, а не независимых физических дисков. Бинарник получен из официального релиза; SHA-256 архива совпал с опубликованным."
+  ],
+  [
+    "code",
+    "$ zsh scripts/start.sh\nRUSTFS_STORAGE_CLASS_STANDARD=EC:2\nRUSTFS_ERASURE_SET_DRIVE_COUNT=4\nRUSTFS_UNSAFE_BYPASS_DISK_CHECK=true\n# server --address 127.0.0.1:9000 --console-enable\n# --console-address 127.0.0.1:9001 \"$PWD/volumes/disk1\" ... \"disk4\"\n$ ./bin/rustfs --version\nrustfs 1.0.1"
+  ],
+  [
+    "p",
+    "Датасет: <b>it_vacancy_data</b>, Andrei Ternikov, Figshare, CC BY 4.0 [1]. CSV содержит <b>351 623 ИТ-вакансии</b>. Три JSON-файла сформированы из первых трёх записей CSV."
+  ],
+  [
+    "table",
+    [
+      [
+        "Объект",
+        "Размер, байт",
+        "PUT / GET; целостность"
+      ],
+      [
+        "it_vacancy_data.csv",
+        "87 555 558",
+        "200 / 200; SHA-256 совпал"
+      ],
+      [
+        "vacancy_01.json",
+        "224",
+        "200 / 200; SHA-256 совпал"
+      ],
+      [
+        "vacancy_02.json",
+        "845",
+        "200 / 200; SHA-256 совпал"
+      ],
+      [
+        "vacancy_03.json",
+        "1 285",
+        "200 / 200; SHA-256 совпал"
+      ]
+    ]
+  ],
+  [
+    "code",
+    "$ python3 scripts/load_data.py\nCSV rows=351623; bytes=87555558; source MD5=OK\nAll 4 uploaded objects: SHA256 MATCH\nSHA256 CSV:\ndadde56cc7e47d4d5294a0933ef26d6abd76db7b7de7503887ab7b252b423dc7"
+  ],
+  [
+    "p",
+    "Рис. 1. Консоль RustFS: загружены CSV и три JSON-файла."
+  ],
+  [
+    "photo",
+    "02-objects.jpg"
+  ],
+  [
+    "p",
+    "2. Реальные размеры и устройство EC"
+  ],
+  [
+    "p",
+    "Замер выполнен до тестовых записей. <b>du -sk</b> показывает выделенную файловой системой ёмкость в КиБ (1 КиБ = 1024 байта). Сумма st_size показывает длины файлов без округления до блоков файловой системы."
+  ],
+  [
+    "code",
+    "$ du -sk volumes/disk*\n42856  volumes/disk1\n42856  volumes/disk2\n42856  volumes/disk3\n42856  volumes/disk4\n$ python3 scripts/measure.py"
+  ],
+  [
+    "table",
+    [
+      [
+        "Папка",
+        "Сумма файлов, Б",
+        "du, Б",
+        "CSV part.1, Б",
+        "xl.meta CSV, Б"
+      ],
+      [
+        "disk1",
+        "43 801 241",
+        "43 884 544",
+        "43 780 467",
+        472
+      ],
+      [
+        "disk2",
+        "43 801 241",
+        "43 884 544",
+        "43 780 467",
+        472
+      ],
+      [
+        "disk3",
+        "43 801 241",
+        "43 884 544",
+        "43 780 467",
+        472
+      ],
+      [
+        "disk4",
+        "43 801 241",
+        "43 884 544",
+        "43 780 467",
+        472
+      ]
+    ]
+  ],
+  [
+    "p",
+    "Метаданные <b>xl.meta</b> реально прочитаны как MessagePack: EcM=2 (data), EcN=2 (parity), EcBSize=1 048 576, Size=87 555 558; EcDist=[2,3,4,1]. Для CSV физические папки содержат следующие позиции:"
+  ],
+  [
+    "table",
+    [
+      [
+        "Папка",
+        "EcIndex",
+        "Тип фрагмента"
+      ],
+      [
+        "disk1",
+        2,
+        "D2: данные"
+      ],
+      [
+        "disk2",
+        3,
+        "P1: чётность"
+      ],
+      [
+        "disk3",
+        4,
+        "P2: чётность"
+      ],
+      [
+        "disk4",
+        1,
+        "D1: данные"
+      ]
+    ]
+  ],
+  [
+    "p",
+    "RustFS применяет Reed-Solomon: каждый блок до 1 МиБ делится на два data-фрагмента, затем вычисляются два parity-фрагмента такой же длины. Parity - кодовые комбинации data-фрагментов, а не полные копии. Для восстановления достаточно любых двух корректных фрагментов [2]."
+  ],
+  [
+    "code",
+    "87 555 558 = 83 × 1 048 576 + 523 750 байт\nПолный блок: D1, D2, P1, P2 по 524 288 байт\nПоследний блок: четыре фрагмента по 261 875 байт\nОдин логический фрагмент: 83 × 524 288 + 261 875 = 43 777 779 Б\n84 контрольные суммы HighwayHash-256: 84 × 32 = 2 688 Б\npart.1 на каждом диске: 43 777 779 + 2 688 = 43 780 467 Б"
+  ],
+  [
+    "p",
+    "Полученный размер <b>точно совпал</b> с четырьмя part.1. У этого CSV размер последнего блока делится на K=2 без остатка, поэтому дополнять его нулями не потребовалось. Все part.1 вместе занимают 175 121 868 байт; без контрольных сумм это ровно 2 × размер CSV."
+  ],
+  [
+    "p",
+    "JSON-фрагменты хранятся inline внутри xl.meta: флаг x-rustfs-internal-inline-data=true. Отдельных part.1 у JSON нет. Размеры xl.meta на каждом диске: vacancy_01.json - 685 Б, vacancy_02.json - 1000 Б, vacancy_03.json - 1222 Б."
+  ],
+  [
+    "p",
+    "Четыре исходных объекта: <b>87 557 912 Б</b>. Все файлы четырёх папок, включая служебные метаданные: <b>175 204 964 Б</b>, фактический коэффициент 2,001018. По du: <b>175 538 176 Б</b>. Разница с идеальными 2× обусловлена метаданными, checksum и округлением файловой системы."
+  ],
+  [
+    "p",
+    "3.1. Потеря 1 из 4 папок (25%)"
+  ],
+  [
+    "p",
+    "Сценарии независимы: перед каждым сервер запускался со всеми четырьмя папками. При работающем сервере выбранные папки переносились в <b>offline/</b>; исходные пути блокировались обычными файлами, чтобы сервер не создал папки заново. RustFS использовал только пути volumes/disk1 - disk4. Данные offline/ не участвовали в чтении. После каждого теста сервер останавливался, папки возвращались и сервер запускался заново."
+  ],
+  [
+    "p",
+    "Отключены disk1. Проверено полное GET всех четырёх объектов и PUT нового тестового JSON."
+  ],
+  [
+    "code",
+    "$ python3 scripts/failure.py disable 1\n$ python3 scripts/failure.py check 1\nUnavailable drive paths: 1/4\ndisk1: Not a directory (confirmed)\n$ python3 scripts/s3.py GET hw2/it_vacancy_data.csv\nHTTP 200; bytes=87555558; SHA256 MATCH\n$ python3 scripts/s3.py GET hw2/vacancy_01.json\nHTTP 200; bytes=224; SHA256 MATCH\n$ python3 scripts/s3.py GET hw2/vacancy_02.json\nHTTP 200; bytes=845; SHA256 MATCH\n$ python3 scripts/s3.py GET hw2/vacancy_03.json\nHTTP 200; bytes=1285; SHA256 MATCH\n$ python3 scripts/s3.py PUT hw2/probe-1.json\nHTTP 200; write OK"
+  ],
+  [
+    "p",
+    "<b>Результат:</b> GET 4/4 - HTTP 200, SHA-256 совпали; PUT - HTTP 200. Остались три фрагмента: чтение требует K=2, запись требует K+1=3."
+  ],
+  [
+    "p",
+    "Рис. 2. Консоль: диски Online - 3; Offline - 1."
+  ],
+  [
+    "photo",
+    "04-loss-1.jpg"
+  ],
+  [
+    "p",
+    "3.2. Потеря 2 из 4 папок (50%)"
+  ],
+  [
+    "p",
+    "Отключены disk1, disk2. Проверено полное GET всех четырёх объектов и PUT нового тестового JSON."
+  ],
+  [
+    "code",
+    "$ python3 scripts/failure.py disable 2\n$ python3 scripts/failure.py check 2\nUnavailable drive paths: 2/4\ndisk1: Not a directory (confirmed)\ndisk2: Not a directory (confirmed)\n$ python3 scripts/s3.py GET hw2/it_vacancy_data.csv\nHTTP 200; bytes=87555558; SHA256 MATCH\n$ python3 scripts/s3.py GET hw2/vacancy_01.json\nHTTP 200; bytes=224; SHA256 MATCH\n$ python3 scripts/s3.py GET hw2/vacancy_02.json\nHTTP 200; bytes=845; SHA256 MATCH\n$ python3 scripts/s3.py GET hw2/vacancy_03.json\nHTTP 200; bytes=1285; SHA256 MATCH\n$ python3 scripts/s3.py PUT hw2/probe-2.json\nHTTP 503; error=ServiceUnavailable"
+  ],
+  [
+    "p",
+    "<b>Результат:</b> GET 4/4 - HTTP 200, SHA-256 совпали; PUT - HTTP 503 ServiceUnavailable. Остались D1 и P2: недостающий D2 восстановлен из parity. Для чтения двух фрагментов достаточно; для записи нужен кворум 3 [2]."
+  ],
+  [
+    "p",
+    "Рис. 3. Консоль: диски Online - 2; Offline - 2."
+  ],
+  [
+    "photo",
+    "05-loss-2.jpg"
+  ],
+  [
+    "p",
+    "3.3. Потеря 3 из 4 папок (75% = 50% + 1 папка)"
+  ],
+  [
+    "p",
+    "Отключены disk1, disk2, disk3. Проверено полное GET всех четырёх объектов и PUT нового тестового JSON."
+  ],
+  [
+    "code",
+    "$ python3 scripts/failure.py disable 3\n$ python3 scripts/failure.py check 3\nUnavailable drive paths: 3/4\ndisk1: Not a directory (confirmed)\ndisk2: Not a directory (confirmed)\ndisk3: Not a directory (confirmed)\n$ python3 scripts/s3.py GET hw2/it_vacancy_data.csv\nHTTP 503; bytes=162; error=SlowDownRead\n$ python3 scripts/s3.py GET hw2/vacancy_01.json\nHTTP 503; bytes=162; error=SlowDownRead\n$ python3 scripts/s3.py GET hw2/vacancy_02.json\nHTTP 503; bytes=162; error=SlowDownRead\n$ python3 scripts/s3.py GET hw2/vacancy_03.json\nHTTP 503; bytes=162; error=SlowDownRead\n$ python3 scripts/s3.py PUT hw2/probe-3.json\nHTTP 503; error=SlowDownRead"
+  ],
+  [
+    "p",
+    "<b>Результат:</b> GET 4/4 и PUT - HTTP 503 SlowDownRead. 162 Б в GET - XML ошибки, а не объект. Остался только D1: 1 &lt; K=2. RustFS закрыл операции при недостаточном storage quorum; восстановить объект из одного фрагмента невозможно."
+  ],
+  [
+    "p",
+    "Рис. 4. Консоль: диски Online - 1; Offline - 3."
+  ],
+  [
+    "photo",
+    "06-loss-3.jpg"
+  ],
+  [
+    "p",
+    "4. Стоимость EC и трёх копий"
+  ],
+  [
+    "p",
+    "Используются десятичные единицы: 1 ГБ = 10⁹ Б; 1 ТБ = 1000 ГБ. V - полезный объём; p - цена одного физического ГБ в месяц. Сравнение использует одинаковую ставку и не включает метаданные, резерв свободного места, серверы и сеть."
+  ],
+  [
+    "code",
+    "EC (K=2, M=2): α = (K + M) / K = 4 / 2 = 2\nТри копии: α = 3\nФизический объём = α × V; стоимость C = α × V × p\nЭкономия EC: (3 - 2) / 3 × 100% = 33,33%"
+  ],
+  [
+    "table",
+    [
+      [
+        "Полезный объём",
+        "EC 2+2",
+        "Три копии",
+        "Экономия EC"
+      ],
+      [
+        "25 ГБ",
+        "50 ГБ; C=50p",
+        "75 ГБ; C=75p",
+        "25 ГБ; 25p"
+      ],
+      [
+        "50 ТБ = 50 000 ГБ",
+        "100 ТБ; C=100 000p",
+        "150 ТБ; C=150 000p",
+        "50 ТБ; 50 000p"
+      ]
+    ]
+  ],
+  [
+    "p",
+    "При <b>условной</b> ставке p=1 руб./(ГБ·мес.): для 25 ГБ стоимость EC - <b>50 руб./мес.</b>, трёх копий - <b>75 руб./мес.</b>; для 50 ТБ - <b>100 000</b> и <b>150 000 руб./мес.</b> Это арифметический пример, не рыночный тариф."
+  ],
+  [
+    "p",
+    "5. Выбор хранилища"
+  ],
+  [
+    "p",
+    "Для исходных CSV и JSON вакансий выбираю <b>S3-совместимое объектное хранилище RustFS с EC 2+2</b>: данные загружаются файлами и читаются для пакетного анализа; изменять строки внутри объектов не требуется. При 50 ТБ EC экономит 50 ТБ физической ёмкости относительно трёх копий. Если нужна фильтрация вакансий и частые изменения отдельных записей, поверх исходных объектов нужна аналитическая или реляционная БД."
+  ],
+  [
+    "p",
+    "<b>Надёжность:</b> схема 2+2 сохраняет чтение при любых двух потерянных фрагментах; эксперимент подтвердил восстановление CSV и JSON при потере 50% папок. Запись прекращается уже при двух потерях: это ограничение кворума, а не потеря читаемых данных. Три независимые копии тоже могут сохранить чтение при потере двух копий, но требуют 3× ёмкости."
+  ],
+  [
+    "p",
+    "<b>Производительность:</b> EC требует кодирования при записи и реконструкции при чтении с потерянными фрагментами; восстановление использует CPU и I/O нескольких дисков. Полные копии позволяют читать целую запись с одной реплики и восстановить её обычным копированием, ценой дополнительной ёмкости и трафика записи. Для большого файлового архива выигрыш EC в ёмкости важнее этой цены; замер скорости в данном опыте не выполнялся."
+  ],
+  [
+    "p",
+    "<b>Ограничение стенда:</b> общий SSD и один узел остаются общей точкой отказа. Для эксплуатации фрагменты необходимо разместить на независимых дисках и узлах с учётом failure domains; EC не заменяет отдельную резервную копию от удаления и логических ошибок."
+  ],
+  [
+    "p",
+    "<b>После тестов:</b> все четыре папки восстановлены; повторное чтение четырёх исходных объектов вернуло HTTP 200 и исходные SHA-256. Тестовый probe-1.json удалён; RustFS оставлен запущенным на localhost."
+  ],
+  [
+    "p",
+    "Источники и материалы"
+  ],
+  [
+    "p",
+    "[1] Andrei Ternikov. <link href=\"https://figshare.com/articles/dataset/it_vacancy_data/19005092\" color=\"#174c82\">it_vacancy_data, Figshare, CC BY 4.0</link>. Полный CSV; file id 33822641; MD5 5e6a8c26ed481e327f5509de10358b11.<br/>[2] <link href=\"https://github.com/rustfs/rustfs/blob/1.0.1/docs/architecture/erasure-coding.md\" color=\"#174c82\">RustFS 1.0.1: Erasure Coding, размер фрагментов, bitrot и кворумы</link>.<br/>[3] <link href=\"https://github.com/rustfs/rustfs/releases/tag/1.0.1\" color=\"#174c82\">Официальный релиз RustFS 1.0.1</link>. Проверенный SHA-256 macOS-архива: 18aac7101c3484b98f93de64a0609aaa8e02aba072ba7927172c4b2eae7d4843."
+  ],
+  [
+    "p",
+    "Полные выводы команд, JSON результатов и оригиналы скриншотов: HW2/evidence/. Воспроизводимые команды: HW2/scripts/. Исходные файлы: HW2/dataset/."
+  ]
+]

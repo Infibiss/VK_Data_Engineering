@@ -1,0 +1,33 @@
+{
+  "rows": 351623,
+  "files": [
+    {
+      "file": "it_vacancy_data.csv",
+      "bytes": 87555558,
+      "sha256": "dadde56cc7e47d4d5294a0933ef26d6abd76db7b7de7503887ab7b252b423dc7",
+      "get_http": 200,
+      "get_sha256": "dadde56cc7e47d4d5294a0933ef26d6abd76db7b7de7503887ab7b252b423dc7"
+    },
+    {
+      "file": "vacancy_01.json",
+      "bytes": 224,
+      "sha256": "af6be720cae7830ec4eeb48d042556a8d680f2cd7336d58d36ba565038614599",
+      "get_http": 200,
+      "get_sha256": "af6be720cae7830ec4eeb48d042556a8d680f2cd7336d58d36ba565038614599"
+    },
+    {
+      "file": "vacancy_02.json",
+      "bytes": 845,
+      "sha256": "78014b242e3ff72f347b25c12eb907214d0d583984146282772c8b4aee50016e",
+      "get_http": 200,
+      "get_sha256": "78014b242e3ff72f347b25c12eb907214d0d583984146282772c8b4aee50016e"
+    },
+    {
+      "file": "vacancy_03.json",
+      "bytes": 1285,
+      "sha256": "12118140a4b5146040fd13452e9ec5d4ef8310160e86b18f0b5e9bc86e44f1ec",
+      "get_http": 200,
+      "get_sha256": "12118140a4b5146040fd13452e9ec5d4ef8310160e86b18f0b5e9bc86e44f1ec"
+    }
+  ]
+}

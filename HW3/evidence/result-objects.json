@@ -1,0 +1,17 @@
+[
+  {
+    "uri": "s3://hh-lake/results/variant9/skills_1.csv",
+    "bytes": 26374,
+    "http": 200
+  },
+  {
+    "uri": "s3://hh-lake/results/variant9/skills_2.csv",
+    "bytes": 388277,
+    "http": 200
+  },
+  {
+    "uri": "s3://hh-lake/results/variant9/skills_3.csv",
+    "bytes": 2433695,
+    "http": 200
+  }
+]

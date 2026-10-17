@@ -1,0 +1,981 @@
+skill_1,frequency,n_salary,median_salary
+android,1156,369,150000.0
+kotlin,1063,259,180000.0
+ios,884,302,150000.0
+git,820,293,150000.0
+swift,704,181,170000.0
+android sdk,609,153,150000.0
+java,584,168,160000.0
+flutter,428,171,135000.0
+mvvm,334,85,140000.0
+ооп,296,118,150000.0
+dart,286,122,135000.0
+react native,239,91,160000.0
+solid,172,46,200000.0
+uikit,171,53,160000.0
+objective-c,165,41,150000.0
+rest,160,72,150000.0
+javascript,152,72,120000.0
+rest api,148,59,130000.0
+typescript,142,48,155000.0
+xcode,142,37,125000.0
+английский язык,137,41,160000.0
+rxjava,125,32,150000.0
+react,121,51,140000.0
+retrofit,120,30,150000.0
+coroutines,106,16,270000.0
+swiftui,98,21,160000.0
+mvp,91,23,110000.0
+jetpack compose,88,15,270000.0
+dagger 2,81,34,180000.0
+android studio,76,18,97500.0
+firebase,74,25,150000.0
+sql,74,32,150000.0
+gradle,69,12,190000.0
+json api,67,31,110000.0
+ci/cd,66,20,230000.0
+mvc,60,19,110000.0
+clean architecture,59,13,200000.0
+atlassian jira,58,32,160000.0
+viper,58,11,125000.0
+api,57,22,160000.0
+redux,57,23,190000.0
+c++,56,4,161250.0
+html,56,26,130000.0
+sqlite,56,17,195000.0
+rxswift,55,12,160000.0
+cocoapods,54,12,125000.0
+ios sdk,54,5,100000.0
+scrum,52,20,150000.0
+dagger,50,7,100000.0
+json,48,24,160000.0
+разработка по,48,20,160000.0
+figma,47,18,145000.0
+http,47,20,170000.0
+combine,44,6,250000.0
+realm,44,19,120000.0
+unit testing,44,7,150000.0
+compose,43,5,285000.0
+ui,43,14,180000.0
+мобильные приложения,43,15,150000.0
+css,42,18,110000.0
+mvi,42,17,200000.0
+room,41,14,225000.0
+работа в команде,41,9,75000.0
+c#,40,12,125000.0
+bloc,38,18,140000.0
+node.js,38,24,165000.0
+linux,36,2,121250.0
+postgresql,35,19,130000.0
+unity,35,7,175000.0
+dagger2,34,10,130000.0
+kotlin coroutines,33,17,250000.0
+mysql,30,11,175000.0
+xml,30,12,160000.0
+coredata,29,18,195000.0
+gitlab,29,8,200000.0
+hilt,28,15,250000.0
+mobx,28,5,100000.0
+python,28,7,115000.0
+xamarin,28,7,150000.0
+docker,27,18,165000.0
+java se,26,12,250000.0
+graphql,25,13,190000.0
+qt,25,1,425000.0
+design patterns,24,20,160000.0
+alamofire,23,2,117500.0
+gcd,23,2,130000.0
+html5,23,8,130000.0
+it,23,0,
+agile,22,11,150000.0
+c/c++,22,1,115000.0
+websocket,22,6,187500.0
+php,21,14,180000.0
+web,21,16,120000.0
+core data,20,0,
+.net framework,19,5,85000.0
+обучение и развитие,19,8,115000.0
+удаленная работа,19,10,200000.0
+mac os,18,9,140000.0
+sdk,18,1,175000.0
+aosp,17,1,300000.0
+jira,17,8,110000.0
+koin,17,7,260000.0
+kotlin multiplatform,17,1,275000.0
+rx,17,9,130000.0
+qml,16,1,425000.0
+мобильная разработка,16,6,220000.0
+cocoa touch,15,2,300000.0
+maui,15,5,150000.0
+atlassian confluence,14,2,170000.0
+foundation,14,5,90000.0
+github,14,6,205000.0
+rxjava2,14,2,202500.0
+swift ui,14,5,115000.0
+js,13,7,110000.0
+angularjs,12,7,130000.0
+dry,12,3,150000.0
+okhttp,12,1,300000.0
+soap,12,2,97500.0
+немецкий язык,12,0,
+разработка логистики,12,0,
+сoroutines,12,6,250000.0
+coroutine,11,0,
+dio,11,8,112500.0
+java script,11,8,120000.0
+material design,11,3,260000.0
+reactjs,11,5,60000.0
+аналитическое мышление,11,7,250000.0
+торговая площадка,11,0,
+управление командой,11,2,235000.0
+android jetpack,10,9,260000.0
+autolayout,10,3,125000.0
+bash,10,0,
+fastlane,10,0,
+flow,10,3,150000.0
+nosql,10,4,300000.0
+snapkit,10,1,80000.0
+swift alliance,10,2,102500.0
+tcp/ip,10,0,
+vue.js,10,6,105000.0
+оптимизация кода,10,1,100000.0
+разработка мобильных приложений,10,5,92500.0
+compose multiplatform,9,9,250000.0
+css3,9,6,99250.0
+junit,9,1,80000.0
+kiss,9,2,150000.0
+kotlin coroutine,9,0,
+mongodb,9,1,110000.0
+ms sql,9,6,180000.0
+react.js,9,5,110000.0
+webrtc,9,3,225000.0
+wpf,9,1,130000.0
+базы данных,9,8,250000.0
+управление проектами,9,0,
+appsflyer,8,3,370000.0
+code review,8,1,300000.0
+google maps api,8,0,
+retrofit 2,8,2,200000.0
+spm,8,2,225000.0
+swagger,8,3,325000.0
+ux,8,4,125000.0
+webpack,8,5,190000.0
+xсode,8,0,
+разработка нового продукта,8,7,250000.0
+afnetworking,7,0,
+appstore,7,3,150000.0
+ci,7,0,
+es6,7,4,110000.0
+frontend,7,3,115000.0
+google play,7,1,250000.0
+jetpack,7,1,300000.0
+kmp,7,1,300000.0
+ktor,7,1,300000.0
+moya,7,1,230000.0
+open source,7,0,
+orm,7,6,110000.0
+react-native,7,3,180000.0
+redmine,7,7,60000.0
+rxjava 2,7,0,
+sailfish os,7,0,
+websockets,7,4,170000.0
+адаптивная верстка,7,7,85000.0
+алгоритмы,7,0,
+база данных: oracle,7,7,250000.0
+разработка,7,0,
+с#,7,3,110000.0
+сicerone,7,3,250000.0
+adobe photoshop,6,1,100000.0
+agile project management,6,4,195000.0
+algorithms,6,0,
+angular,6,1,100000.0
+blockchain,6,1,150000.0
+cmake,6,0,
+cocoa,6,1,400000.0
+di,6,0,
+grpc,6,1,280000.0
+kmm,6,2,245000.0
+livedata,6,3,270000.0
+macos,6,4,125000.0
+mobile,6,1,185000.0
+next.js,6,6,150000.0
+objc,6,0,
+restful api,6,1,52500.0
+riverpod,6,2,140000.0
+ruby,6,4,200000.0
+storekit,6,2,225000.0
+unity developer,6,0,
+visual studio c#,6,0,
+webview,6,3,200000.0
+программист,6,3,175000.0
+aidl,5,0,
+android material,5,0,
+android ui,5,0,
+appstore и testflight,5,0,
+ble,5,3,210000.0
+cleanswift,5,0,
+cordova,5,0,
+development,5,1,150000.0
+divkit,5,0,
+git-flow.,5,0,
+gitlab ci/cd,5,0,
+glide,5,2,292500.0
+https и json,5,0,
+ios 13 human interface guidelines.,5,0,
+jenkins,5,3,230000.0
+jni,5,0,
+jquery,5,0,
+moxy,5,2,130000.0
+provider,5,2,106250.0
+reactnative,5,0,
+restapi,5,4,160000.0
+storyboard/xib,5,0,
+swift 5.1,5,0,
+ui/ux,5,1,115000.0
+xib,5,2,170000.0
+коммуникабельность,5,2,125000.0
+паттерны проектирования,5,2,150000.0
+тайм-менеджмент,5,0,
+умение работать в команде,5,0,
+1с программирование,4,0,
+adjust,4,2,370000.0
+amplitude,4,1,380000.0
+android api,4,0,
+api для web приложений,4,1,300000.0
+ar,4,0,
+architecture components,4,2,150000.0
+arkit,4,0,
+asp.net,4,2,70000.0
+bootstrap,4,2,105000.0
+camera2,4,0,
+cicerone,4,0,
+devops,4,0,
+exoplayer,4,0,
+flutter sdk,4,2,170000.0
+freezed,4,3,160000.0
+gson,4,2,265000.0
+html-верстка,4,4,95000.0
+iphone,4,0,
+java core,4,1,450000.0
+junior,4,4,160000.0
+lottie,4,0,
+middle,4,4,160000.0
+mpv,4,4,300000.0
+objectivec,4,0,
+opengl,4,0,
+os android,4,0,
+postman,4,1,90000.0
+pwa,4,3,190000.0
+react/redux,4,0,
+restful,4,2,90000.0
+retrofit2,4,1,120000.0
+room service,4,1,300000.0
+rxdart,4,3,80000.0
+teamcity,4,1,120000.0
+udf,4,0,
+urlsession,4,1,70000.0
+валидная верстка,4,4,95000.0
+логистика,4,0,
+многопоточность,4,3,200000.0
+работа в условиях многозадачности,4,3,170000.0
+.net core,3,1,130000.0
+android hal,3,0,
+android ndk,3,0,
+android os,3,0,
+android product flavors,3,2,265000.0
+androidx,3,2,150000.0
+appmetrica,3,0,
+async,3,1,450000.0
+async/await,3,0,
+avfoundation,3,0,
+await,3,1,450000.0
+blazor,3,2,300000.0
+c++/c,3,0,
+camera3,3,0,
+cli,3,3,200000.0
+coreanimation,3,1,280000.0
+cv,3,0,
+databinding,3,2,265000.0
+desktop,3,3,75000.0
+developer,3,0,
+driver,3,0,
+e2e,3,0,
+electronjs,3,0,
+es5,3,3,110000.0
+espresso,3,0,
+game programming,3,1,75000.0
+golang,3,0,
+google analytics,3,0,
+google cloud,3,0,
+google play console,3,0,
+google play market,3,2,130000.0
+hidl,3,0,
+ionic,3,0,
+jetpack navigation,3,2,200000.0
+jwt,3,1,100000.0
+kaspresso,3,1,80000.0
+kotlin multiplatform mobile,3,2,190000.0
+kubernetes,3,0,
+laravel,3,0,
+launcher,3,0,
+multithreading,3,1,300000.0
+mvpc,3,0,
+nimble,3,0,
+npm,3,1,260000.0
+oracle,3,0,
+"provider, flutter_bloc, go_router, dio, firebase, shared preferences",3,0,
+qt5,3,0,
+react navigation,3,1,260000.0
+realitykit,3,0,
+sass,3,2,84250.0
+single activity,3,2,265000.0
+solid edge,3,3,75000.0
+ssr,3,3,110000.0
+storyboard,3,0,
+svn,3,1,80000.0
+tdd,3,1,100000.0
+ui kit,3,1,300000.0
+ui-тесты,3,2,200000.0
+unit тесты,3,0,
+unit-тесты,3,0,
+voip,3,0,
+web3,3,0,
+youtrack,3,1,260000.0
+веб-программирование,3,2,130000.0
+верстка,3,0,
+желание обучаться,3,3,200000.0
+желание работать и развиваться,3,1,45000.0
+кроссплатформенная разработка,3,0,
+ответственность,3,3,125000.0
+паттерны,3,3,150000.0
+приложения,3,0,
+работа с базами данных,3,2,133750.0
+разработка ios,3,1,50000.0
+разработка компьютерных игр,3,0,
+разработка мобильных приложений ios/android,3,0,
+разработка под android,3,3,150000.0
+разработка приложений,3,1,65000.0
+рефакторинг кода,3,1,100000.0
+субд,3,0,
+тестирование android,3,1,190000.0
+тестирование ios-приложений,3,0,
+умение адаптироваться,3,1,80000.0
+1c: управление нашей фирмой,2,0,
+1с: предприятие,2,0,
+1с: предприятие 8,2,0,
+1с: унф,2,0,
+adapty,2,1,100000.0
+agtech,2,0,
+android qt,2,0,
+apache cordova,2,0,
+apache kafka,2,0,
+apache maven,2,2,150000.0
+apphud,2,1,100000.0
+apple arkit,2,2,325000.0
+arc,2,0,
+aso,2,2,200000.0
+automotive,2,0,
+avid media composer,2,0,
+aws,2,1,300000.0
+axios,2,2,205000.0
+azure,2,1,300000.0
+bdui,2,0,
+bitbucket,2,1,120000.0
+bitrix,2,2,105000.0
+bloc / provider,2,0,
+bug tracking systems,2,2,400000.0
+canvas,2,1,175000.0
+charts,2,2,170000.0
+clean,2,1,200000.0
+clean code,2,0,
+concurrency,2,0,
+conductor,2,2,130000.0
+confluence,2,1,190000.0
+core animation,2,0,
+core text,2,2,300000.0
+coregraphics,2,1,60000.0
+custom view,2,0,
+dager,2,0,
+dart core,2,0,
+drift,2,0,
+es6+,2,1,260000.0
+fastapi,2,1,100000.0
+flame,2,0,
+flatter,2,0,
+flexbox,2,2,74250.0
+flutter dart,2,2,65000.0
+fluttersdk,2,0,
+fvm,2,0,
+gambling industry,2,1,210000.0
+getx,2,0,
+git flow,2,0,
+go,2,0,
+google api,2,2,170000.0
+grand central dispatch,2,0,
+grasp,2,0,
+hig,2,1,225000.0
+hlsl,2,0,
+https,2,1,100000.0
+huawei,2,2,105000.0
+human interface guidelines,2,0,
+i2c,2,0,
+ios 15+,2,1,165000.0
+iot,2,0,
+ipad,2,0,
+javascript node.js,2,0,
+jssip,2,2,207500.0
+kanban,2,0,
+keitaro,2,2,370000.0
+"kotlin android sdk, android jetpack coroutines dagger2 adapter delegates room mvvm, cle",2,0,
+kotlin dsl,2,0,
+less,2,0,
+maven,2,0,
+mercurial,2,0,
+meteorjs,2,0,
+mobile developer,2,2,150000.0
+mui,2,0,
+multithread programming,2,0,
+mutex,2,2,230000.0
+mvvmс,2,0,
+navigation component,2,1,160000.0
+ndk,2,0,
+nodejs,2,0,
+objective-с,2,0,
+onesignal,2,2,370000.0
+openapi,2,2,155000.0
+oracle pl/sql,2,2,70000.0
+ormlite,2,0,
+performance,2,0,
+promisekit,2,0,
+quick,2,0,
+react.native,2,2,120000.0
+realml,2,2,300000.0
+reanimated,2,0,
+redis,2,0,
+"rest, xml-rpc",2,0,
+ruby on rails,2,0,
+rx2java,2,2,265000.0
+rxcocoa,2,0,
+rxjava3,2,0,
+rxjs,2,1,100000.0
+rxkotlin,2,2,260000.0
+saas,2,1,115000.0
+scenekit,2,0,
+scicharts,2,2,170000.0
+scss,2,0,
+sdwebimage,2,0,
+senior,2,2,125000.0
+service locator,2,0,
+soong,2,0,
+spi,2,0,
+spring framework,2,0,
+spritekit,2,0,
+sql-субд,2,0,
+stl,2,1,425000.0
+swift concurrency,2,0,
+swift package manage,2,0,
+swiftpm,2,0,
+swinject,2,0,
+team management,2,0,
+teamleading,2,0,
+tuist,2,0,
+tvos,2,0,
+unit-тестирование,2,2,200000.0
+ux / ui,2,0,
+version control system,2,2,400000.0
+viewbinding,2,1,285000.0
+vue,2,0,
+webkit,2,0,
+window manager,2,0,
+windows,2,2,300000.0
+workmanager,2,1,285000.0
+ws,2,0,
+ws/rest/rpc,2,0,
+yagni,2,0,
+yandex сервис,2,0,
+yarn,2,0,
+zeplin,2,2,200000.0
+аврора ос,2,0,
+алгоритмы и структуры данных,2,1,150000.0
+английский язык - в2,2,0,
+андройд,2,2,90000.0
+банковское по,2,1,110000.0
+битрикс 24,2,1,185000.0
+блочная верстка,2,0,
+верстка интерфейсов,2,0,
+"внимательность, ответственность",2,2,105000.0
+гис,2,0,
+готовность к самостоятельной работе,2,0,
+грамотность,2,0,
+дизайн интерфейсов,2,0,
+дизайн-система,2,0,
+желание быть наставником,2,0,
+желание учиться и развиваться,2,2,105000.0
+инициативность,2,2,125000.0
+креативность,2,0,
+кроссплатформенность,2,0,
+написание приложений,2,2,90000.0
+онлайн касса,2,1,110000.0
+оптимизация приложений,2,2,170000.0
+опыт работы с платформой ios,2,0,
+организаторские навыки,2,1,190000.0
+офис,2,0,
+программирование,2,0,
+работа с банками,2,1,110000.0
+работа с командой,2,0,
+разработчик,2,0,
+с++,2,0,
+с/с++/objective-c/swift,2,0,
+стремление к профессиональному росту,2,2,105000.0
+телематика,2,0,
+тестирование android-приложений,2,2,117500.0
+умение работать в коллективе,2,2,93750.0
+управление временем,2,2,80000.0
+.net,1,0,
+1с,1,0,
+1с-битрикс,1,0,
+a/b тесты,1,0,
+activity-ktx,1,0,
+adb,1,0,
+alps,1,0,
+analytics,1,0,
+andengine,1,0,
+android 7.0+,1,0,
+android framework,1,0,
+android jetpack suite,1,0,
+android material design guidlines,1,0,
+android ui/ux,1,0,
+android view,1,0,
+android xml,1,0,
+androidx room,1,1,285000.0
+animation,1,0,
+"animation, animator, transition",1,0,
+ansi c++,1,0,
+ansible,1,0,
+api: graphql,1,1,140000.0
+apns,1,0,
+apollo,1,1,165000.0
+app frameworks,1,0,
+app store,1,1,250000.0
+appclips,1,0,
+apple appstore,1,0,
+apple store,1,0,
+apple uikit,1,0,
+appodeal,1,1,150000.0
+architecture,1,0,
+architecture framework,1,0,
+async await,1,0,
+auto_route,1,1,140000.0
+axios/fetch,1,0,
+babel,1,1,260000.0
+backbone,1,1,250000.0
+backend,1,1,140000.0
+beta-тестирования,1,0,
+betting,1,0,
+bitrise,1,0,
+bpmn,1,0,
+buildcontext,1,0,
+buildowner,1,0,
+c,1,0,
+c# .net core,1,0,
+c++17,1,0,
+camera,1,1,285000.0
+camerax,1,0,
+canva,1,1,150000.0
+cardview,1,0,
+carthage,1,1,70000.0
+centrifugo,1,0,
+cfnetwork,1,0,
+cg,1,0,
+ci cd,1,0,
+cicirone,1,0,
+cocoa pods,1,1,260000.0
+cocoapods quick,1,0,
+codegen,1,0,
+codepush,1,0,
+coil,1,0,
+combain,1,0,
+configurationchange,1,0,
+coordinator,1,0,
+coredats,1,0,
+coreimage,1,0,
+coreldraw,1,1,100000.0
+coroutines + flow,1,1,300000.0
+cpa,1,0,
+crypto,1,0,
+cubejs,1,1,190000.0
+customview,1,0,
+dagger hilt,1,0,
+dark,1,1,75000.0
+dart/flutter,1,1,200000.0
+data science,1,1,70000.0
+databases,1,0,
+ddd,1,1,205000.0
+dependency injection,1,0,
+digital visual fortran,1,0,
+dio/freezed,1,0,
+django framework,1,1,250000.0
+dji mobile sdk/mavsdk,1,1,300000.0
+dotween,1,0,
+echo,1,0,
+ef,1,1,130000.0
+ef core,1,1,130000.0
+electron,1,0,
+entity framework core,1,0,
+eslint,1,1,260000.0
+event loop,1,0,
+expo,1,0,
+fintech,1,0,
+flutter async,1,0,
+flutter_bloc,1,1,160000.0
+flutterflow,1,0,
+foster,1,1,175000.0
+fragment api,1,0,
+fragmentmanager,1,0,
+futter,1,1,160000.0
+gamedev,1,1,75000.0
+games,1,0,
+garbage collector,1,0,
+gcd (qos),1,0,
+gcp (good clinical practice),1,1,300000.0
+gdb,1,0,
+gerrit,1,0,
+gin,1,0,
+"git / bitbucket), commit / push / merge /pullrequest / branch",1,0,
+gitlab ci,1,0,
+gms + hms,1,0,
+go-router,1,1,175000.0
+go_router,1,1,160000.0
+google cloud / aws cloud,1,0,
+google cloud platform,1,0,
+google material design,1,0,
+google navigation,1,0,
+gorouter,1,0,
+graphgl,1,1,70000.0
+graphql_codegen,1,1,140000.0
+hms,1,0,
+hoc,1,1,68500.0
+hokey app,1,0,
+http(s),1,1,200000.0
+igaming,1,0,
+imageloader,1,1,300000.0
+inheritedwidget,1,0,
+injector,1,1,120000.0
+interface board,1,1,120000.0
+ioc,1,0,
+ionic framework,1,1,175000.0
+ios coordinator pattern,1,0,
+ios developer,1,0,
+ios sdk 15,1,0,
+ipados,1,0,
+"java, kotlin, android",1,0,
+javascript/typescript,1,0,
+jdbc,1,1,150000.0
+jest,1,0,
+"js, ts",1,1,175000.0
+json annotation,1,1,175000.0
+jsx,1,1,68500.0
+jtbd,1,1,30000.0
+jvm,1,0,
+kafka,1,0,
+keychain,1,0,
+kingfisher,1,1,165000.0
+koa,1,1,210000.0
+kodein,1,0,
+koltin flow,1,0,
+kotlin flow,1,0,
+kotlin native,1,1,250000.0
+kotlin с jetpack compose,1,0,
+"kotlin, mvvm + mvi, single activity, viewbinding, stateflow, coroutine, cicerone, dagger, retrofit",1,0,
+kotlin/java,1,0,
+laos,1,0,
+leadership skills,1,0,
+lightship,1,0,
+liquibase,1,1,225000.0
+lldb,1,0,
+llm,1,1,128000.0
+m2m,1,0,
+make,1,0,
+mapbox,1,1,300000.0
+metalkit,1,0,
+middle+,1,1,150000.0
+mixpanel,1,0,
+mmvm,1,0,
+mobile applibation development,1,0,
+mobile application development,1,0,
+mobile developing,1,1,150000.0
+mockk,1,0,
+moment,1,1,150000.0
+moxy mvp,1,1,100000.0
+mrc,1,0,
+ms sql server,1,0,
+ms visual studio,1,0,
+multi-module architecture,1,1,80000.0
+multimodule,1,0,
+multimodule (многомодульный проект),1,0,
+mv-паттерны,1,0,
+mvi coroutines,1,0,
+"mvi,",1,0,
+mvi/mvvm,1,0,
+mvicore,1,0,
+mvvm+c,1,0,
+mvvm/mvi,1,1,160000.0
+mvvw,1,0,
+mwwm,1,0,
+navigation,1,1,285000.0
+navigation architecture component,1,1,80000.0
+nest js,1,0,
+net core,1,1,180000.0
+next js,1,0,
+nextjs,1,0,
+nlp,1,0,
+no-sql databases (mongodb),1,0,
+nsoperation,1,1,60000.0
+nsoperationqueue,1,0,
+obj-c,1,0,
+odata,1,0,
+office,1,0,
+ois,1,0,
+okhttp3,1,0,
+oop,1,0,
+opencv,1,0,
+opengl es,1,0,
+operationqueue,1,1,200000.0
+paging3,1,1,285000.0
+patterns,1,0,
+pencilkit,1,0,
+pinlayout,1,0,
+pipelineowner,1,0,
+pods,1,0,
+pr-консультирование,1,0,
+precompose,1,0,
+provider as di,1,1,250000.0
+publish mobile app to app store,1,0,
+pytorch,1,0,
+qform 2d/3d,1,1,100000.0
+qmake,1,0,
+qtcreator,1,0,
+quartz,1,0,
+r&d,1,1,300000.0
+react hook form,1,1,260000.0
+react hooks,1,1,260000.0
+react js,1,1,175000.0
+react native elements,1,0,
+react native gesture handler,1,0,
+react native navigation,1,0,
+react native reanimated,1,0,
+react-navigation,1,0,
+recompose,1,1,68500.0
+redux-saga,1,1,68500.0
+redux/mobx,1,0,
+rendering,1,0,
+requests,1,1,90000.0
+reselect,1,1,68500.0
+"rest, json, xml, ssl",1,0,
+rest-api,1,0,
+rest/json,1,1,140000.0
+rest/rpc,1,0,
+restful apls,1,0,
+retrofit + moshi,1,1,300000.0
+retrofit + okhttp,1,0,
+revel,1,0,
+rider,1,0,
+robolectric,1,0,
+room views,1,0,
+rps,1,0,
+rtk,1,1,250000.0
+rx java,1,0,
+rxandroid,1,0,
+rxjava/coroutines,1,1,160000.0
+s.o.l.i.d,1,0,
+scripting,1,0,
+sentry,1,1,380000.0
+server driven ui,1,0,
+services,1,0,
+signalr,1,0,
+sip,1,0,
+snapshot testing,1,0,
+snapshot тесты,1,1,80000.0
+soa,1,0,
+socket,1,0,
+soft skills,1,0,
+solidworks,1,1,200000.0
+spa,1,1,68500.0
+sql databases (postgresql),1,0,
+sqlite3,1,0,
+starscream,1,0,
+statefulwidget,1,0,
+statelesswidget,1,0,
+storyboards,1,0,
+stream,1,0,
+structured concurrency,1,0,
+supabase,1,1,190000.0
+swift 5,1,0,
+swift modern concurrencу,1,0,
+swift package manager,1,1,280000.0
+swift standard library,1,1,250000.0
+swiftdata,1,0,
+symfony,1,1,225000.0
+tcp,1,0,
+tdd/ ci,1,0,
+tensorflow,1,0,
+testfight,1,0,
+texture,1,0,
+tflite api,1,1,300000.0
+the elm architecture,1,0,
+timber,1,1,300000.0
+ubuntu,1,0,
+udp,1,0,
+ugui,1,0,
+ui test,1,0,
+uml,1,0,
+unidirectional data flow,1,0,
+unirx,1,0,
+unit,1,0,
+unit-test,1,0,
+unit-тестами,1,0,
+unit-тестировании,1,0,
+unitask,1,0,
+unittests,1,0,
+unity 3d,1,0,
+unity3d,1,0,
+userdefaults,1,1,175000.0
+view,1,1,165000.0
+vision pro,1,0,
+visualstudio,1,0,
+vpn,1,0,
+vr,1,0,
+vscode,1,1,95000.0
+vuejs,1,1,100000.0
+web - разработка,1,1,120000.0
+web application development,1,1,180000.0
+web socket,1,0,
+web sql,1,0,
+web-sockets,1,0,
+webflow,1,1,68500.0
+wedding photography,1,1,210000.0
+windows 7,1,0,
+windows forms,1,1,180000.0
+xaml,1,0,
+xr,1,0,
+yandex map kit,1,1,160000.0
+yii,1,1,175000.0
+zustand,1,0,
+адаптивность,1,0,
+аккредитованная ит-компания,1,0,
+английский,1,0,
+английский - в2,1,0,
+английский — a2 — элементарный,1,0,
+английский — b2 — средне-продвинутый,1,0,
+английский — c1 — продвинутый,1,0,
+андройд програмист,1,1,90000.0
+андройд программист,1,1,90000.0
+архитектура мобильных приложений,1,1,92500.0
+архитектурные паттерны,1,0,
+асинхронное программирование,1,0,
+бекенд,1,1,160000.0
+битрикс24,1,0,
+быстрое обучение,1,1,210000.0
+вариативность в поиске решений задач,1,1,50000.0
+веб-дизайн,1,1,275000.0
+верстка ui кодом и желательно в xib/storyboard,1,1,325000.0
+верстка на xml,1,0,
+высшее образование,1,0,
+деловая коммуникация,1,0,
+деловая переписка,1,0,
+деловое общение,1,0,
+дружелюбие,1,1,40000.0
+желание работать и зарабатывать,1,0,
+желание расти и развиваться,1,1,160000.0
+знание sqlite,1,1,200000.0
+знание принципов material design,1,0,
+знание принципов solid,1,1,325000.0
+информационные технологии,1,1,120000.0
+исполнительность,1,0,
+кotlin сoroutines,1,0,
+клиент-серверная архитектура,1,0,
+код-ревью,1,0,
+корпоративная этика,1,1,70000.0
+криптовалюта,1,1,190000.0
+лидерство,1,0,
+линейное программирование,1,0,
+логическое мышление,1,0,
+менторство,1,0,
+многозадачность,1,1,300000.0
+мобильная видеосъемка,1,0,
+мобильное приложение,1,1,275000.0
+мобильные приложение,1,0,
+модульное тестирование,1,0,
+мультиплатформенное решение,1,1,95000.0
+навыки разрешения спорных ситуаций,1,0,
+"написание тестов (quick, nimble)",1,1,325000.0
+наставничество,1,0,
+настройка ci/cd,1,1,325000.0
+настройка по,1,1,87500.0
+настройка сетевых подключений,1,1,87500.0
+"не конфликтность, ответственность, аналитический склад ума",1,0,
+обучаемость,1,0,
+обучение сотрудников,1,0,
+ооп и структуры данных,1,1,325000.0
+опп,1,1,320000.0
+опыт написания unit-тестов,1,0,
+"опыт работы с android studio, gradle",1,0,
+опыт работы с git и gradle,1,1,200000.0
+"опыт работы с livedata, retrofit, coururin, okhttp, hilt, room, sql",1,0,
+опыт работы с mvvm-паттерн,1,0,
+опыт работы с системами контроля версий git,1,0,
+опыт разработки ios-приложений в команде разработчиков от 5 лет,1,1,325000.0
+опыт разработки под ios будет преимуществом,1,1,200000.0
+"опытный пользователь пк, знание ms office",1,0,
+организационная осведомленность,1,0,
+оценка задач,1,1,92500.0
+планирование карьеры,1,1,300000.0
+понимание принципов di и протоколо-ориентированного программирования,1,1,325000.0
+понимание принципов работы мобильного приложения,1,1,325000.0
+построение алгоритмов,1,0,
+пример реализованного приложения,1,1,200000.0
+программист мобильных приложений,1,0,
+программная верстка,1,0,
+программный код,1,1,70000.0
+пунктуальность,1,1,50000.0
+работа в графических редакторах,1,0,
+работа с большим объемом информации,1,0,
+работа с макетами,1,1,100000.0
+работать в команде,1,0,
+разговорный английский,1,0,
+разрабатывать приложения,1,0,
+разработка cms,1,1,150000.0
+разработка ui,1,0,
+разработка web-приложений,1,0,
+разработка под ios,1,0,
+разработка технических заданий,1,1,400000.0
+разработчик мобильных приложений,1,0,
+распространенные шаблоны проектирования,1,1,325000.0
+робототехника,1,0,
+сustomview,1,0,
+сапр,1,0,
+сборка приложения,1,1,85000.0
+сетевые протоколы,1,0,
+системная разработка,1,0,
+системное мышление,1,1,50000.0
+сложные анимации и ux сюжеты,1,1,325000.0
+соблюдение сроков,1,0,
+средний middle,1,0,
+субд ms sql server,1,0,
+тестирование,1,0,
+улаживание конфликтов,1,0,
+умение и желание быстро обучаться,1,1,50000.0
+умение находить общий язык,1,0,
+умение писать программы,1,0,
+"умение писать чистый, модульный и легко поддерживаемый код.",1,1,95000.0
+умение принимать решения,1,0,
+умение читать чужой код,1,0,
+управление разработкой,1,1,200000.0
+фитнес,1,0,
+фронтенд,1,1,160000.0
+функциональное программирование,1,1,68500.0
+широкий кругозор,1,1,50000.0
+эффективное принятие решений,1,0,
+яндекс.метрика,1,1,150000.0
+• swiftui,1,1,100000.0
+• uikit,1,1,100000.0
