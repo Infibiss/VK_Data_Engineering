@@ -1,0 +1,3 @@
+{"event":"receiver_ready","at":398399825990333,"wall":1793918186.005515,"port":56272,"fencing":1}
+{"event":"accepted","at":398417824008833,"wall":1793918204.003562,"writer":"standby","epoch":2,"file":"standby-epoch2.csv","sha256":"22ffdbfcefc99a50f8fabe3fe9faddfb2078adfa02aa58347a1da3cab9d7ac55","pointer_version":1}
+{"event":"rejected","at":398447392275666,"wall":1793918233.571876,"writer":"primary","epoch":1,"error":"BadVersionError"}

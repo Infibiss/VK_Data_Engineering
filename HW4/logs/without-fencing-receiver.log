@@ -1,0 +1,3 @@
+{"event":"receiver_ready","at":398352039166666,"wall":1793918138.218615,"port":56229,"fencing":0}
+{"event":"accepted","at":398370977942791,"wall":1793918157.157421,"writer":"standby","epoch":2,"file":"standby-epoch2.csv","sha256":"22ffdbfcefc99a50f8fabe3fe9faddfb2078adfa02aa58347a1da3cab9d7ac55","pointer_version":1}
+{"event":"accepted","at":398399532029416,"wall":1793918185.711553,"writer":"primary","epoch":1,"file":"primary-epoch1.csv","sha256":"22ffdbfcefc99a50f8fabe3fe9faddfb2078adfa02aa58347a1da3cab9d7ac55","pointer_version":2}

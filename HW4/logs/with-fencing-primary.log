@@ -1,0 +1,12 @@
+{"event":"connected","at":398399938375500,"wall":1793918186.1179001,"writer":"primary","session_timeout":10,"session_id":"0x10017a8dd890002"}
+{"event":"leader","at":398399949332791,"wall":1793918186.1288571,"writer":"primary","epoch":1}
+{"event":"checkpoint","at":398400954182416,"wall":1793918187.133709,"epoch":1,"next_row":32768,"version":1,"pairs":2659,"occurrences":5686}
+{"event":"checkpoint","at":398401784139500,"wall":1793918187.963667,"epoch":1,"next_row":65536,"version":2,"pairs":4548,"occurrences":12596}
+{"event":"pause_point","at":398401784399166,"wall":1793918187.963927,"writer":"primary","epoch":1,"next_row":65536}
+{"event":"resumed","at":398441809924041,"wall":1793918227.989516,"writer":"primary","epoch":1,"next_row":65536}
+Connection dropped: socket connection broken
+Transition to CONNECTING
+Session has expired
+{"event":"checkpoint_rejected","at":398444204363041,"wall":1793918230.383958,"epoch":1,"next_row":98304}
+{"event":"publish_attempt","at":398447357241500,"wall":1793918233.5368419,"writer":"primary","epoch":1,"input_rows":229388,"selected_rows":3640,"pairs":11714,"occurrences":46585}
+{"event":"publication_rejected","at":398447395669500,"wall":1793918233.57527,"writer":"primary","epoch":1,"error":"BadVersionError"}

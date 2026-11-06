@@ -1,0 +1,14 @@
+{"event":"run_started","at":398399753877875,"wall":1793918185.933402,"fencing":1,"root":"/hw4/with-fencing-171b870d","baseline":{"pairs":11714,"occurrences":46585,"sha256":"22ffdbfcefc99a50f8fabe3fe9faddfb2078adfa02aa58347a1da3cab9d7ac55"}}
+$ python3 scripts/receiver.py --root /hw4/with-fencing-171b870d --output results/with-fencing --hosts 127.0.0.1:22181,127.0.0.1:22182,127.0.0.1:22183
+$ python3 scripts/coordinator.py --root /hw4/with-fencing-171b870d --sink http://127.0.0.1:56272 --work-dir .runtime/runs/with-fencing-171b870d --hosts 127.0.0.1:22181,127.0.0.1:22182,127.0.0.1:22183 --writer primary --gate .runtime/runs/with-fencing-171b870d/continue
+$ python3 scripts/coordinator.py --root /hw4/with-fencing-171b870d --sink http://127.0.0.1:56272 --work-dir .runtime/runs/with-fencing-171b870d --hosts 127.0.0.1:22181,127.0.0.1:22182,127.0.0.1:22183 --writer standby
+{"event":"checkpoint_at_pause","at":398401802401250,"wall":1793918187.981929,"version":2,"next_row":65536,"file":"1-65536.json.gz","etag":"\"19a962664b6f2b0bbd77ba0b8c3e56ba\"","epoch":1}
+$ kill -STOP 3880
+{"event":"paused","at":398401802539458,"wall":1793918187.9820669,"pid":3880,"signal":"SIGSTOP","paused_at":398401802504666}
+{"event":"handover","at":398412083781708,"wall":1793918198.263326,"old":"primary","new":"standby","epoch":2,"seconds":10.23}
+{"event":"resumed_checkpoint","at":398412189565833,"wall":1793918198.369111,"writer":"standby","next_row":65536,"pairs":4548,"occurrences":12596}
+{"event":"pointer_before_continue","at":398417870539000,"wall":1793918204.050092,"version":1,"writer":"standby","epoch":2,"file":"standby-epoch2.csv","sha256":"22ffdbfcefc99a50f8fabe3fe9faddfb2078adfa02aa58347a1da3cab9d7ac55"}
+$ kill -CONT 3880
+{"event":"continued","at":398441809833541,"wall":1793918227.989426,"pid":3880,"signal":"SIGCONT","paused_seconds":40.007}
+{"event":"pointer_final","at":398447470635041,"wall":1793918233.650236,"version":1,"writer":"standby","epoch":2,"file":"standby-epoch2.csv","sha256":"22ffdbfcefc99a50f8fabe3fe9faddfb2078adfa02aa58347a1da3cab9d7ac55"}
+{"event":"comparison","at":398447470690958,"wall":1793918233.650291,"hw3_equal":true,"accepted":1,"rejected":1,"files":["standby-epoch2.csv"],"pairs":11714,"occurrences":46585,"sha256":"22ffdbfcefc99a50f8fabe3fe9faddfb2078adfa02aa58347a1da3cab9d7ac55"}

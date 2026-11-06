@@ -1,0 +1,28 @@
+2026-11-05T22:08:42.090459+00:00 ZooKeeper runtime: native
+$ bash scripts/zk_ensemble.sh up
+/Users/infibiss/Desktop/VK/HW4/.runtime/downloads/temurin-17.0.21-jre.tar.gz: OK
+/Users/infibiss/Desktop/VK/HW4/.runtime/downloads/apache-zookeeper-3.9.6-bin.tar.gz: OK
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/conf/zoo.cfg
+Starting zookeeper ... STARTED
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk2/conf/zoo.cfg
+Starting zookeeper ... STARTED
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/conf/zoo.cfg
+Starting zookeeper ... STARTED
+[exit 0]
+$ bash scripts/zk_ensemble.sh version
+JAVA_HOME=/Users/infibiss/Desktop/VK/HW4/.runtime/native/java/Contents/Home
+openjdk version "17.0.21" 2026-10-20
+OpenJDK Runtime Environment Temurin-17.0.21+9 (build 17.0.21+9)
+OpenJDK 64-Bit Server VM Temurin-17.0.21+9 (build 17.0.21+9, mixed mode, sharing)
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/conf/zoo.cfg
+Apache ZooKeeper, version 3.9.6 2026-09-03 19:29 UTC
+[exit 0]
+$ bash scripts/zk_ensemble.sh ps
+zk1 running PID 1643
+zk2 running PID 1673
+zk3 running PID 1702
+[exit 0]

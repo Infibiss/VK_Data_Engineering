@@ -16,4 +16,8 @@ HW3/output/
 HW3/aaa.txt
 HW3/it_vacancies_2024.csv
 HW3/evidence/rustfs.log
+HW4/.runtime/
+HW4/.venv/
+HW4/aaa.txt
+
 .idea

@@ -1,0 +1,244 @@
+2026-11-05T22:08:50.726351+00:00 ZooKeeper runtime: native
+$ python3 -u scripts/zk_demo.py quorum
+
+[2026-11-05T22:08:50+00:00] 3/3: initial roles
+$ bash scripts/zk_ensemble.sh ps
+zk1 running PID 1643
+zk2 running PID 1673
+zk3 running PID 1702
+[exit 0]
+$ bash scripts/zk_ensemble.sh status
+
+[zk1; host 127.0.0.1:22181]
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/conf/zoo.cfg
+Client port found: 22181. Client address: 127.0.0.1. Client SSL: false.
+Mode: follower
+
+[zk2; host 127.0.0.1:22182]
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk2/conf/zoo.cfg
+Client port found: 22182. Client address: 127.0.0.1. Client SSL: false.
+Mode: leader
+
+[zk3; host 127.0.0.1:22183]
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/conf/zoo.cfg
+Client port found: 22183. Client address: 127.0.0.1. Client SSL: false.
+Mode: follower
+[exit 0]
+
+[2026-11-05T22:08:51+00:00] 2/3: stop initial leader zk2, elect a new leader
+$ bash scripts/zk_ensemble.sh stop -t 5 zk2
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk2/conf/zoo.cfg
+Stopping zookeeper ... STOPPED
+[exit 0]
+$ bash scripts/zk_ensemble.sh status zk1 zk3
+
+[zk1; host 127.0.0.1:22181]
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/conf/zoo.cfg
+Client port found: 22181. Client address: 127.0.0.1. Client SSL: false.
+Mode: follower
+
+[zk3; host 127.0.0.1:22183]
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/conf/zoo.cfg
+Client port found: 22183. Client address: 127.0.0.1. Client SSL: false.
+Mode: leader
+[exit 0]
+$ bash scripts/zk_ensemble.sh cli zk3 -timeout 10000 create /hw4-quorum-771e35f8 committed-with-two-servers
+Connecting to 127.0.0.1:22183
+2026-11-06 01:08:53,792 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:zookeeper.version=3.9.6-a355171b081b5b60749db8f19cca1528b0df936f, built on 2026-09-03 19:29 UTC
+2026-11-06 01:08:53,793 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:host.name=localhost
+2026-11-06 01:08:53,793 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.version=17.0.21
+2026-11-06 01:08:53,793 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.vendor=Eclipse Adoptium
+2026-11-06 01:08:53,793 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.home=/Users/infibiss/Desktop/VK/HW4/.runtime/native/java/Contents/Home
+2026-11-06 01:08:53,793 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.class.path=/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../zookeeper-metrics-providers/zookeeper-prometheus-metrics/target/classes:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../zookeeper-server/target/classes:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../build/classes:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../zookeeper-metrics-providers/zookeeper-prometheus-metrics/target/lib/*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../zookeeper-server/target/lib/*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../build/lib/*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/zookeeper-prometheus-metrics-3.9.6.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/zookeeper-jute-3.9.6.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/zookeeper-3.9.6.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/snappy-java-1.1.10.5.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/slf4j-api-2.0.13.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/simpleclient_servlet-0.9.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/simpleclient_hotspot-0.9.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/simpleclient_common-0.9.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/simpleclient-0.9.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-transport-native-unix-common-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-transport-native-epoll-4.1.137.Final-linux-x86_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-transport-classes-epoll-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-transport-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-tcnative-classes-2.0.81.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-windows-x86_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-osx-x86_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-osx-aarch_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-linux-x86_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-linux-aarch_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-resolver-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-handler-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-common-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-codec-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-buffer-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/metrics-core-4.1.12.1.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/logback-core-1.3.15.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/logback-classic-1.3.15.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jline-3.30.14-jdk8.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jetty-util-ajax-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jetty-util-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jetty-servlet-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jetty-server-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jetty-security-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jetty-io-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jetty-http-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/javax.servlet-api-3.1.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jackson-databind-2.22.2.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jackson-core-2.22.2.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jackson-annotations-2.22.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/commons-io-2.17.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/commons-cli-1.5.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/audience-annotations-0.12.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../zookeeper-*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../zookeeper-server/src/main/resources/lib/*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../conf:
+2026-11-06 01:08:53,794 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.library.path=/Users/infibiss/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2026-11-06 01:08:53,794 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.io.tmpdir=/var/folders/rl/jzw71c0n4996k6j_58f9r13w0000gn/T/
+2026-11-06 01:08:53,794 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.compiler=<NA>
+2026-11-06 01:08:53,794 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.name=Mac OS X
+2026-11-06 01:08:53,794 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.arch=aarch64
+2026-11-06 01:08:53,794 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.version=27.0
+2026-11-06 01:08:53,794 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:user.name=infibiss
+2026-11-06 01:08:53,794 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:user.home=/Users/infibiss
+2026-11-06 01:08:53,794 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:user.dir=/Users/infibiss/Desktop/VK/HW4
+2026-11-06 01:08:53,794 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.memory.free=242MB
+2026-11-06 01:08:53,794 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.memory.max=256MB
+2026-11-06 01:08:53,794 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.memory.total=256MB
+2026-11-06 01:08:53,795 [myid:] - INFO  [main:o.a.z.ZooKeeper@635] - Initiating client connection, connectString=127.0.0.1:22183 sessionTimeout=10000 watcher=org.apache.zookeeper.ZooKeeperMain$MyWatcher@2ed0fbae
+2026-11-06 01:08:53,798 [myid:] - INFO  [main:o.a.z.c.X509Util@84] - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2026-11-06 01:08:53,801 [myid:] - INFO  [main:o.a.z.ClientCnxnSocket@235] - jute.maxbuffer value is 1048575 Bytes
+2026-11-06 01:08:53,805 [myid:] - INFO  [main:o.a.z.ClientCnxn@1734] - zookeeper.request.timeout value is 0. feature enabled=false
+2026-11-06 01:08:53,808 [myid:127.0.0.1:22183] - INFO  [main-SendThread(127.0.0.1:22183):o.a.z.ClientCnxn$SendThread@1170] - Opening socket connection to server localhost/127.0.0.1:22183.
+2026-11-06 01:08:53,808 [myid:127.0.0.1:22183] - INFO  [main-SendThread(127.0.0.1:22183):o.a.z.ClientCnxn$SendThread@1172] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-06 01:08:53,814 [myid:127.0.0.1:22183] - INFO  [main-SendThread(127.0.0.1:22183):o.a.z.ClientCnxn$SendThread@1006] - Socket connection established, initiating session, client: /127.0.0.1:55039, server: localhost/127.0.0.1:22183
+2026-11-06 01:08:53,834 [myid:127.0.0.1:22183] - INFO  [main-SendThread(127.0.0.1:22183):o.a.z.ClientCnxn$SendThread@1438] - Session establishment complete on server localhost/127.0.0.1:22183, session id = 0x30017a5ddf70000, negotiated timeout = 10000
+
+WATCHER::
+
+WatchedEvent state:SyncConnected type:None path:null zxid: -1
+Created /hw4-quorum-771e35f8
+2026-11-06 01:08:53,848 [myid:] - INFO  [main:o.a.z.u.ServiceUtils@45] - Exiting JVM with code 0
+[exit 0]
+$ bash scripts/zk_ensemble.sh cli zk1 -timeout 10000 get /hw4-quorum-771e35f8
+Connecting to 127.0.0.1:22181
+2026-11-06 01:08:54,670 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:zookeeper.version=3.9.6-a355171b081b5b60749db8f19cca1528b0df936f, built on 2026-09-03 19:29 UTC
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:host.name=localhost
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.version=17.0.21
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.vendor=Eclipse Adoptium
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.home=/Users/infibiss/Desktop/VK/HW4/.runtime/native/java/Contents/Home
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.class.path=/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../zookeeper-metrics-providers/zookeeper-prometheus-metrics/target/classes:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../zookeeper-server/target/classes:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../build/classes:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../zookeeper-metrics-providers/zookeeper-prometheus-metrics/target/lib/*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../zookeeper-server/target/lib/*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../build/lib/*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/zookeeper-prometheus-metrics-3.9.6.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/zookeeper-jute-3.9.6.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/zookeeper-3.9.6.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/snappy-java-1.1.10.5.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/slf4j-api-2.0.13.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/simpleclient_servlet-0.9.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/simpleclient_hotspot-0.9.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/simpleclient_common-0.9.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/simpleclient-0.9.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-transport-native-unix-common-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-transport-native-epoll-4.1.137.Final-linux-x86_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-transport-classes-epoll-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-transport-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-tcnative-classes-2.0.81.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-windows-x86_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-osx-x86_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-osx-aarch_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-linux-x86_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-linux-aarch_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-resolver-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-handler-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-common-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-codec-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-buffer-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/metrics-core-4.1.12.1.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/logback-core-1.3.15.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/logback-classic-1.3.15.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jline-3.30.14-jdk8.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jetty-util-ajax-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jetty-util-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jetty-servlet-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jetty-server-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jetty-security-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jetty-io-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jetty-http-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/javax.servlet-api-3.1.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jackson-databind-2.22.2.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jackson-core-2.22.2.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jackson-annotations-2.22.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/commons-io-2.17.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/commons-cli-1.5.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/audience-annotations-0.12.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../zookeeper-*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../zookeeper-server/src/main/resources/lib/*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../conf:
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.library.path=/Users/infibiss/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.io.tmpdir=/var/folders/rl/jzw71c0n4996k6j_58f9r13w0000gn/T/
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.compiler=<NA>
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.name=Mac OS X
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.arch=aarch64
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.version=27.0
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:user.name=infibiss
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:user.home=/Users/infibiss
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:user.dir=/Users/infibiss/Desktop/VK/HW4
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.memory.free=242MB
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.memory.max=256MB
+2026-11-06 01:08:54,671 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.memory.total=256MB
+2026-11-06 01:08:54,672 [myid:] - INFO  [main:o.a.z.ZooKeeper@635] - Initiating client connection, connectString=127.0.0.1:22181 sessionTimeout=10000 watcher=org.apache.zookeeper.ZooKeeperMain$MyWatcher@2ed0fbae
+2026-11-06 01:08:54,675 [myid:] - INFO  [main:o.a.z.c.X509Util@84] - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2026-11-06 01:08:54,678 [myid:] - INFO  [main:o.a.z.ClientCnxnSocket@235] - jute.maxbuffer value is 1048575 Bytes
+2026-11-06 01:08:54,680 [myid:] - INFO  [main:o.a.z.ClientCnxn@1734] - zookeeper.request.timeout value is 0. feature enabled=false
+2026-11-06 01:08:54,685 [myid:127.0.0.1:22181] - INFO  [main-SendThread(127.0.0.1:22181):o.a.z.ClientCnxn$SendThread@1170] - Opening socket connection to server localhost/127.0.0.1:22181.
+2026-11-06 01:08:54,686 [myid:127.0.0.1:22181] - INFO  [main-SendThread(127.0.0.1:22181):o.a.z.ClientCnxn$SendThread@1172] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-06 01:08:54,692 [myid:127.0.0.1:22181] - INFO  [main-SendThread(127.0.0.1:22181):o.a.z.ClientCnxn$SendThread@1006] - Socket connection established, initiating session, client: /127.0.0.1:55040, server: localhost/127.0.0.1:22181
+2026-11-06 01:08:54,707 [myid:127.0.0.1:22181] - INFO  [main-SendThread(127.0.0.1:22181):o.a.z.ClientCnxn$SendThread@1438] - Session establishment complete on server localhost/127.0.0.1:22181, session id = 0x10017a5ddf30000, negotiated timeout = 10000
+
+WATCHER::
+
+WatchedEvent state:SyncConnected type:None path:null zxid: -1
+committed-with-two-servers
+2026-11-06 01:08:54,711 [myid:] - INFO  [main:o.a.z.u.ServiceUtils@45] - Exiting JVM with code 0
+[exit 0]
+
+[2026-11-05T22:08:55+00:00] 1/3: stop zk1; zk3 stays running without quorum
+$ bash scripts/zk_ensemble.sh stop -t 5 zk1
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/conf/zoo.cfg
+Stopping zookeeper ... STOPPED
+[exit 0]
+$ bash scripts/zk_ensemble.sh ps --all
+zk1 stopped
+zk2 stopped
+zk3 running PID 1702
+[exit 0]
+[4lw srvr, 127.0.0.1:22183] This ZooKeeper instance is not currently serving requests
+$ bash scripts/zk_ensemble.sh status zk3
+
+[zk3; host 127.0.0.1:22183]
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/conf/zoo.cfg
+Client port found: 22183. Client address: 127.0.0.1. Client SSL: false.
+Error contacting service. It is probably not running.
+[exit 1]
+$ bash scripts/zk_ensemble.sh cli zk3 -timeout 3000 get /hw4-quorum-771e35f8
+Connecting to 127.0.0.1:22183
+2026-11-06 01:08:57,066 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:zookeeper.version=3.9.6-a355171b081b5b60749db8f19cca1528b0df936f, built on 2026-09-03 19:29 UTC
+2026-11-06 01:08:57,067 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:host.name=localhost
+2026-11-06 01:08:57,067 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.version=17.0.21
+2026-11-06 01:08:57,067 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.vendor=Eclipse Adoptium
+2026-11-06 01:08:57,067 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.home=/Users/infibiss/Desktop/VK/HW4/.runtime/native/java/Contents/Home
+2026-11-06 01:08:57,067 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.class.path=/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../zookeeper-metrics-providers/zookeeper-prometheus-metrics/target/classes:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../zookeeper-server/target/classes:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../build/classes:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../zookeeper-metrics-providers/zookeeper-prometheus-metrics/target/lib/*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../zookeeper-server/target/lib/*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../build/lib/*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/zookeeper-prometheus-metrics-3.9.6.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/zookeeper-jute-3.9.6.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/zookeeper-3.9.6.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/snappy-java-1.1.10.5.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/slf4j-api-2.0.13.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/simpleclient_servlet-0.9.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/simpleclient_hotspot-0.9.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/simpleclient_common-0.9.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/simpleclient-0.9.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-transport-native-unix-common-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-transport-native-epoll-4.1.137.Final-linux-x86_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-transport-classes-epoll-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-transport-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-tcnative-classes-2.0.81.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-windows-x86_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-osx-x86_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-osx-aarch_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-linux-x86_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-linux-aarch_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-resolver-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-handler-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-common-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-codec-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/netty-buffer-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/metrics-core-4.1.12.1.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/logback-core-1.3.15.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/logback-classic-1.3.15.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jline-3.30.14-jdk8.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jetty-util-ajax-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jetty-util-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jetty-servlet-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jetty-server-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jetty-security-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jetty-io-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jetty-http-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/javax.servlet-api-3.1.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jackson-databind-2.22.2.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jackson-core-2.22.2.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/jackson-annotations-2.22.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/commons-io-2.17.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/commons-cli-1.5.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../lib/audience-annotations-0.12.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../zookeeper-*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../zookeeper-server/src/main/resources/lib/*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/bin/../conf:
+2026-11-06 01:08:57,067 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.library.path=/Users/infibiss/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2026-11-06 01:08:57,067 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.io.tmpdir=/var/folders/rl/jzw71c0n4996k6j_58f9r13w0000gn/T/
+2026-11-06 01:08:57,067 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.compiler=<NA>
+2026-11-06 01:08:57,068 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.name=Mac OS X
+2026-11-06 01:08:57,068 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.arch=aarch64
+2026-11-06 01:08:57,068 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.version=27.0
+2026-11-06 01:08:57,068 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:user.name=infibiss
+2026-11-06 01:08:57,068 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:user.home=/Users/infibiss
+2026-11-06 01:08:57,068 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:user.dir=/Users/infibiss/Desktop/VK/HW4
+2026-11-06 01:08:57,068 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.memory.free=242MB
+2026-11-06 01:08:57,068 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.memory.max=256MB
+2026-11-06 01:08:57,068 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.memory.total=256MB
+2026-11-06 01:08:57,069 [myid:] - INFO  [main:o.a.z.ZooKeeper@635] - Initiating client connection, connectString=127.0.0.1:22183 sessionTimeout=3000 watcher=org.apache.zookeeper.ZooKeeperMain$MyWatcher@2ed0fbae
+2026-11-06 01:08:57,071 [myid:] - INFO  [main:o.a.z.c.X509Util@84] - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2026-11-06 01:08:57,074 [myid:] - INFO  [main:o.a.z.ClientCnxnSocket@235] - jute.maxbuffer value is 1048575 Bytes
+2026-11-06 01:08:57,076 [myid:] - INFO  [main:o.a.z.ClientCnxn@1734] - zookeeper.request.timeout value is 0. feature enabled=false
+2026-11-06 01:08:57,081 [myid:127.0.0.1:22183] - INFO  [main-SendThread(127.0.0.1:22183):o.a.z.ClientCnxn$SendThread@1170] - Opening socket connection to server localhost/127.0.0.1:22183.
+2026-11-06 01:08:57,081 [myid:127.0.0.1:22183] - INFO  [main-SendThread(127.0.0.1:22183):o.a.z.ClientCnxn$SendThread@1172] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-06 01:08:57,087 [myid:127.0.0.1:22183] - INFO  [main-SendThread(127.0.0.1:22183):o.a.z.ClientCnxn$SendThread@1006] - Socket connection established, initiating session, client: /127.0.0.1:55053, server: localhost/127.0.0.1:22183
+2026-11-06 01:08:57,089 [myid:127.0.0.1:22183] - WARN  [main-SendThread(127.0.0.1:22183):o.a.z.ClientCnxn$SendThread@1301] - Session 0x0 for server localhost/127.0.0.1:22183, Closing socket connection. Attempting reconnect except it is a SessionExpiredException or SessionTimeoutException.
+org.apache.zookeeper.ClientCnxn$EndOfStreamException: Unable to read additional data from server sessionid 0x0, likely server has closed socket
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:77)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:356)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1290)
+KeeperErrorCode = ConnectionLoss for /hw4-quorum-771e35f8
+2026-11-06 01:08:57,198 [myid:] - ERROR [main:o.a.z.u.ServiceUtils@48] - Exiting JVM with code 1
+[exit 1]
+
+[2026-11-05T22:08:57+00:00] 3/3: restart both stopped servers
+$ bash scripts/zk_ensemble.sh start zk2 zk1
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk2/conf/zoo.cfg
+Starting zookeeper ... STARTED
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/conf/zoo.cfg
+Starting zookeeper ... STARTED
+[exit 0]
+$ bash scripts/zk_ensemble.sh status
+
+[zk1; host 127.0.0.1:22181]
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/conf/zoo.cfg
+Client port found: 22181. Client address: 127.0.0.1. Client SSL: false.
+Mode: follower
+
+[zk2; host 127.0.0.1:22182]
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk2/conf/zoo.cfg
+Client port found: 22182. Client address: 127.0.0.1. Client SSL: false.
+Mode: follower
+
+[zk3; host 127.0.0.1:22183]
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/conf/zoo.cfg
+Client port found: 22183. Client address: 127.0.0.1. Client SSL: false.
+Mode: leader
+[exit 0]
+$ bash scripts/zk_ensemble.sh cli zk1 -timeout 10000 get /hw4-quorum-771e35f8
+Connecting to 127.0.0.1:22181
+2026-11-06 01:09:00,445 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:zookeeper.version=3.9.6-a355171b081b5b60749db8f19cca1528b0df936f, built on 2026-09-03 19:29 UTC
+2026-11-06 01:09:00,446 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:host.name=localhost
+2026-11-06 01:09:00,446 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.version=17.0.21
+2026-11-06 01:09:00,446 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.vendor=Eclipse Adoptium
+2026-11-06 01:09:00,446 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.home=/Users/infibiss/Desktop/VK/HW4/.runtime/native/java/Contents/Home
+2026-11-06 01:09:00,446 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.class.path=/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../zookeeper-metrics-providers/zookeeper-prometheus-metrics/target/classes:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../zookeeper-server/target/classes:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../build/classes:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../zookeeper-metrics-providers/zookeeper-prometheus-metrics/target/lib/*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../zookeeper-server/target/lib/*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../build/lib/*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/zookeeper-prometheus-metrics-3.9.6.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/zookeeper-jute-3.9.6.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/zookeeper-3.9.6.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/snappy-java-1.1.10.5.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/slf4j-api-2.0.13.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/simpleclient_servlet-0.9.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/simpleclient_hotspot-0.9.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/simpleclient_common-0.9.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/simpleclient-0.9.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-transport-native-unix-common-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-transport-native-epoll-4.1.137.Final-linux-x86_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-transport-classes-epoll-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-transport-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-tcnative-classes-2.0.81.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-windows-x86_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-osx-x86_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-osx-aarch_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-linux-x86_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-tcnative-boringssl-static-2.0.81.Final-linux-aarch_64.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-resolver-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-handler-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-common-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-codec-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/netty-buffer-4.1.137.Final.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/metrics-core-4.1.12.1.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/logback-core-1.3.15.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/logback-classic-1.3.15.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jline-3.30.14-jdk8.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jetty-util-ajax-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jetty-util-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jetty-servlet-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jetty-server-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jetty-security-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jetty-io-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jetty-http-9.4.58.v20250814.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/javax.servlet-api-3.1.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jackson-databind-2.22.2.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jackson-core-2.22.2.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/jackson-annotations-2.22.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/commons-io-2.17.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/commons-cli-1.5.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../lib/audience-annotations-0.12.0.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../zookeeper-*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../zookeeper-server/src/main/resources/lib/*.jar:/Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/bin/../conf:
+2026-11-06 01:09:00,447 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.library.path=/Users/infibiss/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2026-11-06 01:09:00,447 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.io.tmpdir=/var/folders/rl/jzw71c0n4996k6j_58f9r13w0000gn/T/
+2026-11-06 01:09:00,447 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:java.compiler=<NA>
+2026-11-06 01:09:00,447 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.name=Mac OS X
+2026-11-06 01:09:00,447 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.arch=aarch64
+2026-11-06 01:09:00,447 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.version=27.0
+2026-11-06 01:09:00,447 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:user.name=infibiss
+2026-11-06 01:09:00,447 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:user.home=/Users/infibiss
+2026-11-06 01:09:00,447 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:user.dir=/Users/infibiss/Desktop/VK/HW4
+2026-11-06 01:09:00,447 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.memory.free=242MB
+2026-11-06 01:09:00,447 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.memory.max=256MB
+2026-11-06 01:09:00,447 [myid:] - INFO  [main:o.a.z.Environment@98] - Client environment:os.memory.total=256MB
+2026-11-06 01:09:00,448 [myid:] - INFO  [main:o.a.z.ZooKeeper@635] - Initiating client connection, connectString=127.0.0.1:22181 sessionTimeout=10000 watcher=org.apache.zookeeper.ZooKeeperMain$MyWatcher@2ed0fbae
+2026-11-06 01:09:00,451 [myid:] - INFO  [main:o.a.z.c.X509Util@84] - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2026-11-06 01:09:00,454 [myid:] - INFO  [main:o.a.z.ClientCnxnSocket@235] - jute.maxbuffer value is 1048575 Bytes
+2026-11-06 01:09:00,457 [myid:] - INFO  [main:o.a.z.ClientCnxn@1734] - zookeeper.request.timeout value is 0. feature enabled=false
+2026-11-06 01:09:00,462 [myid:127.0.0.1:22181] - INFO  [main-SendThread(127.0.0.1:22181):o.a.z.ClientCnxn$SendThread@1170] - Opening socket connection to server localhost/127.0.0.1:22181.
+2026-11-06 01:09:00,462 [myid:127.0.0.1:22181] - INFO  [main-SendThread(127.0.0.1:22181):o.a.z.ClientCnxn$SendThread@1172] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-06 01:09:00,468 [myid:127.0.0.1:22181] - INFO  [main-SendThread(127.0.0.1:22181):o.a.z.ClientCnxn$SendThread@1006] - Socket connection established, initiating session, client: /127.0.0.1:55072, server: localhost/127.0.0.1:22181
+2026-11-06 01:09:00,489 [myid:127.0.0.1:22181] - INFO  [main-SendThread(127.0.0.1:22181):o.a.z.ClientCnxn$SendThread@1438] - Session establishment complete on server localhost/127.0.0.1:22181, session id = 0x10017a5f67d0000, negotiated timeout = 10000
+
+WATCHER::
+
+WatchedEvent state:SyncConnected type:None path:null zxid: -1
+committed-with-two-servers
+2026-11-06 01:09:00,492 [myid:] - INFO  [main:o.a.z.u.ServiceUtils@45] - Exiting JVM with code 0
+[exit 0]
+
+[2026-11-05T22:09:00+00:00] PASS: 3→2→1→3; persistent znode /hw4-quorum-771e35f8 survived
+[exit 0]

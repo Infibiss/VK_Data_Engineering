@@ -1,0 +1,14 @@
+{"event":"run_started","at":398351953035166,"wall":1793918138.132483,"fencing":0,"root":"/hw4/without-fencing-50f3fbae","baseline":{"pairs":11714,"occurrences":46585,"sha256":"22ffdbfcefc99a50f8fabe3fe9faddfb2078adfa02aa58347a1da3cab9d7ac55"}}
+$ python3 scripts/receiver.py --root /hw4/without-fencing-50f3fbae --output results/without-fencing --hosts 127.0.0.1:22181,127.0.0.1:22182,127.0.0.1:22183
+$ python3 scripts/coordinator.py --root /hw4/without-fencing-50f3fbae --sink http://127.0.0.1:56229 --work-dir .runtime/runs/without-fencing-50f3fbae --hosts 127.0.0.1:22181,127.0.0.1:22182,127.0.0.1:22183 --writer primary --gate .runtime/runs/without-fencing-50f3fbae/continue
+$ python3 scripts/coordinator.py --root /hw4/without-fencing-50f3fbae --sink http://127.0.0.1:56229 --work-dir .runtime/runs/without-fencing-50f3fbae --hosts 127.0.0.1:22181,127.0.0.1:22182,127.0.0.1:22183 --writer standby
+{"event":"checkpoint_at_pause","at":398354096557125,"wall":1793918140.2760088,"version":2,"next_row":65536,"file":"1-65536.json.gz","etag":"\"19a962664b6f2b0bbd77ba0b8c3e56ba\"","epoch":1}
+$ kill -STOP 3818
+{"event":"paused","at":398354096699291,"wall":1793918140.276151,"pid":3818,"signal":"SIGSTOP","paused_at":398354096653250}
+{"event":"handover","at":398365079007958,"wall":1793918151.258477,"old":"primary","new":"standby","epoch":2,"seconds":10.946}
+{"event":"resumed_checkpoint","at":398365254234875,"wall":1793918151.4337049,"writer":"standby","next_row":65536,"pairs":4548,"occurrences":12596}
+{"event":"pointer_before_continue","at":398371018652291,"wall":1793918157.1981308,"version":1,"writer":"standby","epoch":2,"file":"standby-epoch2.csv","sha256":"22ffdbfcefc99a50f8fabe3fe9faddfb2078adfa02aa58347a1da3cab9d7ac55"}
+$ kill -CONT 3818
+{"event":"continued","at":398394109002750,"wall":1793918180.2885199,"pid":3818,"signal":"SIGCONT","paused_seconds":40.012}
+{"event":"pointer_final","at":398399613540291,"wall":1793918185.7930639,"version":2,"writer":"primary","epoch":1,"file":"primary-epoch1.csv","sha256":"22ffdbfcefc99a50f8fabe3fe9faddfb2078adfa02aa58347a1da3cab9d7ac55"}
+{"event":"comparison","at":398399613596291,"wall":1793918185.79312,"hw3_equal":true,"accepted":2,"rejected":0,"files":["primary-epoch1.csv","standby-epoch2.csv"],"pairs":11714,"occurrences":46585,"sha256":"22ffdbfcefc99a50f8fabe3fe9faddfb2078adfa02aa58347a1da3cab9d7ac55"}

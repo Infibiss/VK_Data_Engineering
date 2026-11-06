@@ -1,0 +1,12 @@
+{"event":"connected","at":398352171879875,"wall":1793918138.351328,"writer":"primary","session_timeout":10,"session_id":"0x20017a8dd8c0001"}
+{"event":"leader","at":398352189256833,"wall":1793918138.368705,"writer":"primary","epoch":1}
+{"event":"checkpoint","at":398353253714625,"wall":1793918139.433165,"epoch":1,"next_row":32768,"version":1,"pairs":2659,"occurrences":5686}
+{"event":"checkpoint","at":398354051674708,"wall":1793918140.231126,"epoch":1,"next_row":65536,"version":2,"pairs":4548,"occurrences":12596}
+{"event":"pause_point","at":398354054863875,"wall":1793918140.234315,"writer":"primary","epoch":1,"next_row":65536}
+{"event":"resumed","at":398394110165125,"wall":1793918180.289682,"writer":"primary","epoch":1,"next_row":65536}
+Connection dropped: socket connection error: Connection reset by peer
+Transition to CONNECTING
+Session has expired
+{"event":"checkpoint_rejected","at":398396437847916,"wall":1793918182.617367,"epoch":1,"next_row":98304}
+{"event":"publish_attempt","at":398399498977541,"wall":1793918185.678505,"writer":"primary","epoch":1,"input_rows":229388,"selected_rows":3640,"pairs":11714,"occurrences":46585}
+{"event":"published","at":398399532307125,"wall":1793918185.711831,"writer":"primary","epoch":1,"message":"записал результат","pointer_version":2,"file":"primary-epoch1.csv"}

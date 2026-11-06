@@ -1,0 +1,12 @@
+{"event":"connected","at":398352318656958,"wall":1793918138.498106,"writer":"standby","session_timeout":10,"session_id":"0x10017a8dd890000"}
+{"event":"waiting","at":398352321484583,"wall":1793918138.5009332,"writer":"standby"}
+{"event":"leader","at":398365042665625,"wall":1793918151.222135,"writer":"standby","epoch":2}
+{"event":"restored","at":398365212293458,"wall":1793918151.391763,"writer":"standby","epoch":2,"from_epoch":1,"next_row":65536,"pairs":4548,"occurrences":12596}
+{"event":"checkpoint","at":398367494017833,"wall":1793918153.6734898,"epoch":2,"next_row":98304,"version":3,"pairs":6077,"occurrences":19223}
+{"event":"checkpoint","at":398368317244875,"wall":1793918154.4967191,"epoch":2,"next_row":131072,"version":4,"pairs":7954,"occurrences":26758}
+{"event":"checkpoint","at":398369151048666,"wall":1793918155.330524,"epoch":2,"next_row":163840,"version":5,"pairs":9912,"occurrences":33877}
+{"event":"checkpoint","at":398369998239291,"wall":1793918156.177716,"epoch":2,"next_row":196608,"version":6,"pairs":10550,"occurrences":39811}
+{"event":"checkpoint","at":398370863457583,"wall":1793918157.042936,"epoch":2,"next_row":229376,"version":7,"pairs":11714,"occurrences":46585}
+{"event":"checkpoint","at":398370943965291,"wall":1793918157.123444,"epoch":2,"next_row":229388,"version":8,"pairs":11714,"occurrences":46585}
+{"event":"publish_attempt","at":398370947273958,"wall":1793918157.126752,"writer":"standby","epoch":2,"input_rows":229388,"selected_rows":3640,"pairs":11714,"occurrences":46585}
+{"event":"published","at":398370978457875,"wall":1793918157.157936,"writer":"standby","epoch":2,"message":"записал результат","pointer_version":1,"file":"standby-epoch2.csv"}

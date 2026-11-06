@@ -1,0 +1,23 @@
+$ bash scripts/zk_ensemble.sh ps
+zk1 running PID 2736
+zk2 running PID 2786
+zk3 running PID 2830
+$ bash scripts/zk_ensemble.sh status
+
+[zk1; host 127.0.0.1:22181]
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk1/conf/zoo.cfg
+Client port found: 22181. Client address: 127.0.0.1. Client SSL: false.
+Mode: follower
+
+[zk2; host 127.0.0.1:22182]
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk2/conf/zoo.cfg
+Client port found: 22182. Client address: 127.0.0.1. Client SSL: false.
+Mode: leader
+
+[zk3; host 127.0.0.1:22183]
+ZooKeeper JMX enabled by default
+Using config: /Users/infibiss/Desktop/VK/HW4/.runtime/native/zk3/conf/zoo.cfg
+Client port found: 22183. Client address: 127.0.0.1. Client SSL: false.
+Mode: follower
