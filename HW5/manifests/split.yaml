@@ -1,0 +1,31 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: split
+  namespace: hw5
+spec:
+  backoffLimit: 0
+  template:
+    metadata:
+      labels:
+        app: split
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: pairs
+        image: hw5-job:local
+        imagePullPolicy: Never
+        args:
+        - split
+        - "--shard-prefix"
+        - s3://hh-lake/hw5/shards
+        envFrom:
+        - configMapRef:
+            name: s3-config
+        resources:
+          requests:
+            cpu: 500m
+            memory: 64Mi
+          limits:
+            cpu: '1'
+            memory: 512Mi

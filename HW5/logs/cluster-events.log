@@ -1,0 +1,74 @@
+LAST SEEN   TYPE      REASON                  OBJECT                              MESSAGE
+9m27s       Normal    ScalingReplicaSet       deployment/rustfs                   Scaled up replica set rustfs-6f9d7d778c from 0 to 1
+9m27s       Normal    Provisioning            persistentvolumeclaim/rustfs-data   External provisioner is provisioning volume for claim "hw5/rustfs-data"
+9m27s       Normal    ExternalProvisioning    persistentvolumeclaim/rustfs-data   Waiting for a volume to be created either by the external provisioner 'rancher.io/local-path' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.
+9m27s       Normal    WaitForFirstConsumer    persistentvolumeclaim/rustfs-data   waiting for first consumer to be created before binding
+9m27s       Normal    SuccessfulCreate        replicaset/rustfs-6f9d7d778c        Created pod: rustfs-6f9d7d778c-8nc5k
+9m22s       Normal    ProvisioningSucceeded   persistentvolumeclaim/rustfs-data   Successfully provisioned volume pvc-5a50fa18-87c5-4860-ac35-7d781d4304b9
+9m22s       Normal    Scheduled               pod/rustfs-6f9d7d778c-8nc5k         Successfully assigned hw5/rustfs-6f9d7d778c-8nc5k to hw5-control-plane
+9m21s       Normal    Started                 pod/rustfs-6f9d7d778c-8nc5k         Container started
+9m21s       Normal    Created                 pod/rustfs-6f9d7d778c-8nc5k         Container created
+9m21s       Normal    Pulled                  pod/rustfs-6f9d7d778c-8nc5k         Container image "rustfs/rustfs:1.0.1" already present on machine and can be accessed by the pod
+9m19s       Normal    SuccessfulCreate        job/pairs-oom                       Created pod: pairs-oom-f5mjz
+9m19s       Normal    Scheduled               pod/pairs-oom-f5mjz                 Successfully assigned hw5/pairs-oom-f5mjz to hw5-control-plane
+9m19s       Normal    SuccessfulCreate        job/pairs-profile                   Created pod: pairs-profile-jr4t9
+9m19s       Normal    Scheduled               pod/pairs-profile-jr4t9             Successfully assigned hw5/pairs-profile-jr4t9 to hw5-control-plane
+9m18s       Normal    Pulled                  pod/pairs-profile-jr4t9             Container image "hw5-job:local" already present on machine and can be accessed by the pod
+9m18s       Normal    Created                 pod/pairs-profile-jr4t9             Container created
+9m18s       Normal    Started                 pod/pairs-profile-jr4t9             Container started
+9m18s       Normal    Started                 pod/pairs-oom-f5mjz                 Container started
+9m18s       Normal    Created                 pod/pairs-oom-f5mjz                 Container created
+9m18s       Normal    Pulled                  pod/pairs-oom-f5mjz                 Container image "hw5-job:local" already present on machine and can be accessed by the pod
+9m15s       Warning   BackoffLimitExceeded    job/pairs-oom                       Job has reached the specified backoff limit
+9m15s       Warning   BackoffLimitExceeded    job/pairs-profile                   Job has reached the specified backoff limit
+7m56s       Normal    SuccessfulCreate        job/pairs-oom                       Created pod: pairs-oom-k7577
+7m56s       Normal    Created                 pod/pairs-profile-vrsw7             Container created
+7m56s       Normal    Pulled                  pod/pairs-profile-vrsw7             Container image "hw5-job:local" already present on machine and can be accessed by the pod
+7m56s       Normal    Scheduled               pod/pairs-profile-vrsw7             Successfully assigned hw5/pairs-profile-vrsw7 to hw5-control-plane
+7m56s       Normal    Scheduled               pod/pairs-oom-k7577                 Successfully assigned hw5/pairs-oom-k7577 to hw5-control-plane
+7m56s       Normal    Pulled                  pod/pairs-oom-k7577                 Container image "hw5-job:local" already present on machine and can be accessed by the pod
+7m56s       Normal    Created                 pod/pairs-oom-k7577                 Container created
+7m56s       Normal    SuccessfulCreate        job/pairs-profile                   Created pod: pairs-profile-vrsw7
+7m55s       Normal    Started                 pod/pairs-profile-vrsw7             Container started
+7m55s       Normal    Started                 pod/pairs-oom-k7577                 Container started
+7m53s       Warning   BackoffLimitExceeded    job/pairs-oom                       Job has reached the specified backoff limit
+7m44s       Normal    Completed               job/pairs-profile                   Job completed
+6m56s       Normal    Scheduled               pod/pairs-calibrated-zbnpw          Successfully assigned hw5/pairs-calibrated-zbnpw to hw5-control-plane
+6m56s       Normal    SuccessfulCreate        job/pairs-calibrated                Created pod: pairs-calibrated-zbnpw
+6m55s       Normal    Started                 pod/pairs-calibrated-zbnpw          Container started
+6m55s       Normal    Created                 pod/pairs-calibrated-zbnpw          Container created
+6m55s       Normal    Pulled                  pod/pairs-calibrated-zbnpw          Container image "hw5-job:local" already present on machine and can be accessed by the pod
+6m44s       Normal    Completed               job/pairs-calibrated                Job completed
+6m43s       Normal    SuccessfulCreate        job/split                           Created pod: split-tvpdc
+6m43s       Normal    Created                 pod/split-tvpdc                     Container created
+6m43s       Normal    Started                 pod/split-tvpdc                     Container started
+6m43s       Normal    Scheduled               pod/split-tvpdc                     Successfully assigned hw5/split-tvpdc to hw5-control-plane
+6m43s       Normal    Pulled                  pod/split-tvpdc                     Container image "hw5-job:local" already present on machine and can be accessed by the pod
+6m13s       Normal    Completed               job/split                           Job completed
+5m53s       Normal    SuccessfulCreate        job/pairs-parallel                  Created pod: pairs-parallel-1-p59gw
+5m53s       Normal    Scheduled               pod/pairs-parallel-3-9txnl          Successfully assigned hw5/pairs-parallel-3-9txnl to hw5-control-plane
+5m53s       Normal    SuccessfulCreate        job/pairs-parallel                  Created pod: pairs-parallel-3-9txnl
+5m53s       Normal    SuccessfulCreate        job/pairs-parallel                  Created pod: pairs-parallel-2-cz6t5
+5m53s       Normal    SuccessfulCreate        job/pairs-parallel                  Created pod: pairs-parallel-0-pzj8d
+5m53s       Normal    Scheduled               pod/pairs-parallel-0-pzj8d          Successfully assigned hw5/pairs-parallel-0-pzj8d to hw5-control-plane
+5m53s       Normal    Scheduled               pod/pairs-parallel-1-p59gw          Successfully assigned hw5/pairs-parallel-1-p59gw to hw5-control-plane
+5m53s       Normal    Scheduled               pod/pairs-parallel-2-cz6t5          Successfully assigned hw5/pairs-parallel-2-cz6t5 to hw5-control-plane
+5m52s       Normal    Started                 pod/pairs-parallel-1-p59gw          Container started
+5m52s       Normal    Pulled                  pod/pairs-parallel-2-cz6t5          Container image "hw5-job:local" already present on machine and can be accessed by the pod
+5m52s       Normal    Pulled                  pod/pairs-parallel-0-pzj8d          Container image "hw5-job:local" already present on machine and can be accessed by the pod
+5m52s       Normal    Started                 pod/pairs-parallel-3-9txnl          Container started
+5m52s       Normal    Created                 pod/pairs-parallel-3-9txnl          Container created
+5m52s       Normal    Pulled                  pod/pairs-parallel-3-9txnl          Container image "hw5-job:local" already present on machine and can be accessed by the pod
+5m52s       Normal    Created                 pod/pairs-parallel-0-pzj8d          Container created
+5m52s       Normal    Started                 pod/pairs-parallel-2-cz6t5          Container started
+5m52s       Normal    Created                 pod/pairs-parallel-2-cz6t5          Container created
+5m52s       Normal    Started                 pod/pairs-parallel-0-pzj8d          Container started
+5m52s       Normal    Pulled                  pod/pairs-parallel-1-p59gw          Container image "hw5-job:local" already present on machine and can be accessed by the pod
+5m52s       Normal    Created                 pod/pairs-parallel-1-p59gw          Container created
+5m46s       Normal    Completed               job/pairs-parallel                  Job completed
+5m46s       Normal    Created                 pod/pairs-reduce-kct79              Container created
+5m46s       Normal    Pulled                  pod/pairs-reduce-kct79              Container image "hw5-job:local" already present on machine and can be accessed by the pod
+5m46s       Normal    SuccessfulCreate        job/pairs-reduce                    Created pod: pairs-reduce-kct79
+5m46s       Normal    Started                 pod/pairs-reduce-kct79              Container started
+5m46s       Normal    Scheduled               pod/pairs-reduce-kct79              Successfully assigned hw5/pairs-reduce-kct79 to hw5-control-plane
+5m43s       Normal    Completed               job/pairs-reduce                    Job completed

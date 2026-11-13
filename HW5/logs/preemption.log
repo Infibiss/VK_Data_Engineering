@@ -1,0 +1,88 @@
+LAST SEEN   TYPE      REASON             OBJECT              MESSAGE
+14s         Normal    Scheduled          pod/cpu-holder      Successfully assigned hw5-scheduling/cpu-holder to hw5-control-plane
+14s         Normal    Pulled             pod/cpu-holder      Container image "hw5-job:local" already present on machine and can be accessed by the pod
+14s         Normal    Created            pod/cpu-holder      Container created
+14s         Normal    Started            pod/cpu-holder      Container started
+13s         Warning   FailedScheduling   pod/cpu-waiter      0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Insufficient cpu.
+12s         Normal    Killing            pod/cpu-holder      Stopping container task
+10s         Normal    Scheduled          pod/cpu-waiter      Successfully assigned hw5-scheduling/cpu-waiter to hw5-control-plane
+9s          Normal    Pulled             pod/cpu-waiter      Container image "hw5-job:local" already present on machine and can be accessed by the pod
+9s          Normal    Created            pod/cpu-waiter      Container created
+9s          Normal    Started            pod/cpu-waiter      Container started
+8s          Normal    Killing            pod/cpu-waiter      Stopping container task
+5s          Normal    Scheduled          pod/priority-low    Successfully assigned hw5-scheduling/priority-low to hw5-control-plane
+4s          Warning   FailedScheduling   pod/priority-high   0/1 nodes are available: 1 Insufficient cpu.
+4s          Normal    Pulled             pod/priority-low    Container image "hw5-job:local" already present on machine and can be accessed by the pod
+4s          Normal    Created            pod/priority-low    Container created
+4s          Normal    Started            pod/priority-low    Container started
+4s          Normal    Preempted          pod/priority-low    Preempted by pod efd7c371-61f0-4972-ab5a-0279e9907a05 on node hw5-control-plane
+3s          Normal    Killing            pod/priority-low    Stopping container task
+1s          Normal    Scheduled          pod/priority-high   Successfully assigned hw5-scheduling/priority-high to hw5-control-plane
+0s          Normal    Pulled             pod/priority-high   Container image "hw5-job:local" already present on machine and can be accessed by the pod
+0s          Normal    Created            pod/priority-high   Container created
+0s          Normal    Started            pod/priority-high   Container started
+Name:                 priority-high
+Namespace:            hw5-scheduling
+Priority:             1000
+Priority Class Name:  hw5-high
+Service Account:      default
+Node:                 hw5-control-plane/172.21.0.2
+Start Time:           Sat, 14 Nov 2026 00:33:22 +0300
+Labels:               <none>
+Annotations:          <none>
+Status:               Running
+IP:                   10.244.0.12
+IPs:
+  IP:  10.244.0.12
+Containers:
+  task:
+    Container ID:  containerd://2191b32de26eb005530a857541ed9f4d9a172e5cb39620295441e96d81a5c20f
+    Image:         hw5-job:local
+    Image ID:      sha256:8406654cab9c9eb9a9a06588d8f5387d11d7b5414d2fae89d547b64f4092759f
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      python
+      -c
+      import time; time.sleep(600)
+    State:          Running
+      Started:      Sat, 14 Nov 2026 00:33:23 +0300
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     8
+      memory:  128Mi
+    Requests:
+      cpu:        8
+      memory:     64Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-brqtz (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-brqtz:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason            Age   From               Message
+  ----     ------            ----  ----               -------
+  Warning  FailedScheduling  4s    default-scheduler  0/1 nodes are available: 1 Insufficient cpu.
+  Normal   Scheduled         1s    default-scheduler  Successfully assigned hw5-scheduling/priority-high to hw5-control-plane
+  Normal   Pulled            0s    kubelet            Container image "hw5-job:local" already present on machine and can be accessed by the pod
+  Normal   Created           0s    kubelet            Container created
+  Normal   Started           0s    kubelet            Container started
+NAME            READY   STATUS    RESTARTS   AGE   IP            NODE                NOMINATED NODE   READINESS GATES
+priority-high   1/1     Running   0          4s    10.244.0.12   hw5-control-plane   <none>           <none>

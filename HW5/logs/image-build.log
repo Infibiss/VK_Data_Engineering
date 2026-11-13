@@ -1,0 +1,42 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 447B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.12-slim
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 11.11kB done
+#5 DONE 0.0s
+
+#6 [3/6] COPY HW5/requirements.txt /app/requirements.txt
+#6 CACHED
+
+#7 [2/6] WORKDIR /app
+#7 CACHED
+
+#8 [4/6] RUN pip install --no-cache-dir -r /app/requirements.txt
+#8 CACHED
+
+#9 [5/6] COPY HW3/scripts/common.py HW3/scripts/aggregates.py HW3/scripts/mapreduce.py /opt/hw3/
+#9 CACHED
+
+#10 [6/6] COPY HW5/app/ /app/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers 0.0s done
+#11 writing image sha256:0a05548124ca24ff6487640a196d576971ac72dcd673af8a7db89ecb6bd1861e done
+#11 naming to docker.io/library/hw5-job:local done
+#11 DONE 0.0s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/ufmchy6sme3m87z59pmheb2ds

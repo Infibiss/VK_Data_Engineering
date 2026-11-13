@@ -1,0 +1,40 @@
+{
+  "reference": "/workspace/HW3/results/skills_2.csv",
+  "reference_sha256": "22ffdbfcefc99a50f8fabe3fe9faddfb2078adfa02aa58347a1da3cab9d7ac55",
+  "reference_distinct_pairs": 11714,
+  "reference_pair_occurrences": 46585,
+  "datasets": {
+    "parallel": {
+      "endpoint": "http://host.docker.internal:9200",
+      "prefix": "s3://hh-lake/hw5/parallel",
+      "skills_2_sha256": "22ffdbfcefc99a50f8fabe3fe9faddfb2078adfa02aa58347a1da3cab9d7ac55",
+      "top10_sha256": "8aeed34e706f2bdb655447e11a323cb38ee2eb8ad7f8d33fc302c57432fb07bf",
+      "skills_2_exact_match": true,
+      "top10_exact_match": true,
+      "distinct_pairs": 11714,
+      "pair_occurrences": 46585,
+      "input_rows": 229388,
+      "selected_rows": 3640,
+      "summary_consistent": true
+    },
+    "single": {
+      "endpoint": "http://host.docker.internal:9100",
+      "prefix": "s3://hh-lake/hw5/calibrated",
+      "skills_2_sha256": "22ffdbfcefc99a50f8fabe3fe9faddfb2078adfa02aa58347a1da3cab9d7ac55",
+      "top10_sha256": "8aeed34e706f2bdb655447e11a323cb38ee2eb8ad7f8d33fc302c57432fb07bf",
+      "skills_2_exact_match": true,
+      "top10_exact_match": true,
+      "distinct_pairs": 11714,
+      "pair_occurrences": 46585,
+      "input_rows": 229388,
+      "selected_rows": 3640,
+      "summary_consistent": true
+    }
+  },
+  "single_matches_hw3": true,
+  "parallel_matches_hw3": true,
+  "top10_matches_hw3": true,
+  "single_parallel_equal": true,
+  "row_counts_match": true,
+  "passed": true
+}

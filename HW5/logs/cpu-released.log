@@ -1,0 +1,63 @@
+Name:                 cpu-waiter
+Namespace:            hw5-scheduling
+Priority:             100
+Priority Class Name:  hw5-low
+Service Account:      default
+Node:                 hw5-control-plane/172.21.0.2
+Start Time:           Sat, 14 Nov 2026 00:33:13 +0300
+Labels:               <none>
+Annotations:          <none>
+Status:               Running
+IP:                   10.244.0.10
+IPs:
+  IP:  10.244.0.10
+Containers:
+  task:
+    Container ID:  containerd://07c7b94f2842575fd09c79407b24cf5acf5dcd8a3aefda28fde3ed766f2de28d
+    Image:         hw5-job:local
+    Image ID:      sha256:8406654cab9c9eb9a9a06588d8f5387d11d7b5414d2fae89d547b64f4092759f
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      python
+      -c
+      import time; time.sleep(600)
+    State:          Running
+      Started:      Sat, 14 Nov 2026 00:33:14 +0300
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     2
+      memory:  128Mi
+    Requests:
+      cpu:        2
+      memory:     64Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-7pj8j (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-7pj8j:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason            Age   From               Message
+  ----     ------            ----  ----               -------
+  Warning  FailedScheduling  4s    default-scheduler  0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Insufficient cpu.
+  Normal   Scheduled         1s    default-scheduler  Successfully assigned hw5-scheduling/cpu-waiter to hw5-control-plane
+  Normal   Pulled            0s    kubelet            Container image "hw5-job:local" already present on machine and can be accessed by the pod
+  Normal   Created           0s    kubelet            Container created
+  Normal   Started           0s    kubelet            Container started

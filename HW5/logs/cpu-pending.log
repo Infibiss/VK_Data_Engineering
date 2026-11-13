@@ -1,0 +1,50 @@
+Name:                 cpu-waiter
+Namespace:            hw5-scheduling
+Priority:             100
+Priority Class Name:  hw5-low
+Service Account:      default
+Node:                 <none>
+Labels:               <none>
+Annotations:          <none>
+Status:               Pending
+IP:                   
+IPs:                  <none>
+Containers:
+  task:
+    Image:      hw5-job:local
+    Port:       <none>
+    Host Port:  <none>
+    Command:
+      python
+      -c
+      import time; time.sleep(600)
+    Limits:
+      cpu:     2
+      memory:  128Mi
+    Requests:
+      cpu:        2
+      memory:     64Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-7pj8j (ro)
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:
+  kube-api-access-7pj8j:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason            Age   From               Message
+  ----     ------            ----  ----               -------
+  Warning  FailedScheduling  0s    default-scheduler  0/1 nodes are available: 1 Insufficient cpu. no new claims to deallocate, preemption: 0/1 nodes are available: 1 Insufficient cpu.
+NAME         READY   STATUS    RESTARTS   AGE   IP           NODE                NOMINATED NODE   READINESS GATES
+cpu-holder   1/1     Running   0          1s    10.244.0.9   hw5-control-plane   <none>           <none>
+cpu-waiter   0/1     Pending   0          0s    <none>       <none>              <none>           <none>

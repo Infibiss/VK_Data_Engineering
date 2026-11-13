@@ -1,0 +1,11 @@
+skill_1,skill_2,frequency,n_salary,median_salary
+android,kotlin,777,204,180000.0
+ios,swift,556,144,160000.0
+android sdk,kotlin,513,118,155000.0
+java,kotlin,495,132,160000.0
+android,android sdk,458,117,160000.0
+android,java,416,132,170000.0
+android,git,370,135,140000.0
+android sdk,java,334,84,155000.0
+git,kotlin,304,95,150000.0
+git,ios,283,130,145000.0

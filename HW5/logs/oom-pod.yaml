@@ -1,0 +1,175 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2026-11-13T21:33:29Z"
+    generateName: pairs-oom-
+    generation: 1
+    labels:
+      app: pairs-oom
+      batch.kubernetes.io/controller-uid: 4e20dcad-162b-40f1-b3ca-78dfbce9f88f
+      batch.kubernetes.io/job-name: pairs-oom
+      controller-uid: 4e20dcad-162b-40f1-b3ca-78dfbce9f88f
+      job-name: pairs-oom
+    name: pairs-oom-k7577
+    namespace: hw5
+    ownerReferences:
+    - apiVersion: batch/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Job
+      name: pairs-oom
+      uid: 4e20dcad-162b-40f1-b3ca-78dfbce9f88f
+    resourceVersion: "877"
+    uid: 49dff5c4-3b85-4c18-b402-8be530b7ba2d
+  spec:
+    containers:
+    - args:
+      - single
+      - --output-prefix
+      - s3://hh-lake/hw5/pairs-oom
+      env:
+      - name: S3_ENDPOINT
+        value: http://host.docker.internal:9100
+      - name: AWS_ACCESS_KEY_ID
+        value: hw3admin
+      - name: AWS_SECRET_ACCESS_KEY
+        value: hw3-local-secret
+      envFrom:
+      - configMapRef:
+          name: s3-config
+      image: hw5-job:local
+      imagePullPolicy: Never
+      name: pairs
+      resources:
+        limits:
+          cpu: "1"
+          memory: 32Mi
+        requests:
+          cpu: 500m
+          memory: 16Mi
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-z9w76
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: hw5-control-plane
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Never
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-z9w76
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2026-11-13T21:33:31Z"
+      observedGeneration: 1
+      status: "False"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2026-11-13T21:33:29Z"
+      observedGeneration: 1
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2026-11-13T21:33:29Z"
+      observedGeneration: 1
+      reason: PodFailed
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2026-11-13T21:33:29Z"
+      observedGeneration: 1
+      reason: PodFailed
+      status: "False"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2026-11-13T21:33:29Z"
+      observedGeneration: 1
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - allocatedResources:
+        cpu: 500m
+        memory: 16Mi
+      containerID: containerd://fc23a505f9aaf8eba444fd620d3de1f4e4698ad2469c0e39cef06596de2abde1
+      image: docker.io/library/hw5-job:local
+      imageID: sha256:0a05548124ca24ff6487640a196d576971ac72dcd673af8a7db89ecb6bd1861e
+      lastState: {}
+      name: pairs
+      ready: false
+      resources:
+        limits:
+          cpu: "1"
+          memory: 32Mi
+        requests:
+          cpu: 500m
+          memory: 16Mi
+      restartCount: 0
+      started: false
+      state:
+        terminated:
+          containerID: containerd://fc23a505f9aaf8eba444fd620d3de1f4e4698ad2469c0e39cef06596de2abde1
+          exitCode: 137
+          finishedAt: "2026-11-13T21:33:30Z"
+          reason: OOMKilled
+          startedAt: "2026-11-13T21:33:29Z"
+      user:
+        linux:
+          gid: 0
+          supplementalGroups:
+          - 0
+          uid: 10001
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-z9w76
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 172.21.0.2
+    hostIPs:
+    - ip: 172.21.0.2
+    observedGeneration: 1
+    phase: Failed
+    podIP: 10.244.0.14
+    podIPs:
+    - ip: 10.244.0.14
+    qosClass: Burstable
+    startTime: "2026-11-13T21:33:29Z"
+kind: List
+metadata:
+  resourceVersion: ""

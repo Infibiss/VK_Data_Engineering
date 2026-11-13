@@ -1,0 +1,6 @@
+{
+  "rss_peak_mib": 59.14453125,
+  "cgroup_peak_mib": 50.76953125,
+  "formula": "ceil(max(rss_peak, cgroup_peak) * 1.25 / 16) * 16 MiB",
+  "limit_mib": 80
+}

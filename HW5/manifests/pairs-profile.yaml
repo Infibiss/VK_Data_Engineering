@@ -1,0 +1,38 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pairs-profile
+  namespace: hw5
+spec:
+  backoffLimit: 0
+  template:
+    metadata:
+      labels:
+        app: pairs-profile
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: pairs
+        image: hw5-job:local
+        imagePullPolicy: Never
+        args:
+        - single
+        - "--output-prefix"
+        - s3://hh-lake/hw5/pairs-profile
+        envFrom:
+        - configMapRef:
+            name: s3-config
+        resources:
+          requests:
+            cpu: 500m
+            memory: 64Mi
+          limits:
+            cpu: '1'
+            memory: 512Mi
+        env:
+        - name: S3_ENDPOINT
+          value: http://host.docker.internal:9100
+        - name: AWS_ACCESS_KEY_ID
+          value: hw3admin
+        - name: AWS_SECRET_ACCESS_KEY
+          value: hw3-local-secret

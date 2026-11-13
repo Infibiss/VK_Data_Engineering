@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: List
+items:
+- apiVersion: scheduling.k8s.io/v1
+  kind: PriorityClass
+  metadata:
+    name: hw5-low
+  value: 100
+  globalDefault: false
+  preemptionPolicy: PreemptLowerPriority
+- apiVersion: scheduling.k8s.io/v1
+  kind: PriorityClass
+  metadata:
+    name: hw5-high
+  value: 1000
+  globalDefault: false
+  preemptionPolicy: PreemptLowerPriority

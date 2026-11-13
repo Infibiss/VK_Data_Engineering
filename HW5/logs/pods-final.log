@@ -1,0 +1,11 @@
+NAME                      READY   STATUS      RESTARTS   AGE     IP            NODE                NOMINATED NODE   READINESS GATES
+pairs-calibrated-zbnpw    0/1     Completed   0          2m14s   10.244.0.16   hw5-control-plane   <none>           <none>
+pairs-oom-k7577           0/1     OOMKilled   0          3m14s   10.244.0.14   hw5-control-plane   <none>           <none>
+pairs-parallel-0-pzj8d    0/1     Completed   0          71s     10.244.0.18   hw5-control-plane   <none>           <none>
+pairs-parallel-1-p59gw    0/1     Completed   0          71s     10.244.0.20   hw5-control-plane   <none>           <none>
+pairs-parallel-2-cz6t5    0/1     Completed   0          71s     10.244.0.19   hw5-control-plane   <none>           <none>
+pairs-parallel-3-9txnl    0/1     Completed   0          71s     10.244.0.21   hw5-control-plane   <none>           <none>
+pairs-profile-vrsw7       0/1     Completed   0          3m14s   10.244.0.15   hw5-control-plane   <none>           <none>
+pairs-reduce-kct79        0/1     Completed   0          64s     10.244.0.22   hw5-control-plane   <none>           <none>
+rustfs-6f9d7d778c-8nc5k   1/1     Running     0          4m45s   10.244.0.6    hw5-control-plane   <none>           <none>
+split-tvpdc               0/1     Completed   0          2m1s    10.244.0.17   hw5-control-plane   <none>           <none>

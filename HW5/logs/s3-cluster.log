@@ -1,0 +1,6 @@
+NAME     READY   UP-TO-DATE   AVAILABLE   AGE
+rustfs   1/1     1            1           5m38s
+NAME     TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)    AGE
+rustfs   ClusterIP   10.96.162.75   <none>        9000/TCP   5m38s
+NAME          STATUS   CAPACITY   STORAGECLASS
+rustfs-data   Bound    2Gi        standard

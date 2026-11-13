@@ -1,0 +1,74 @@
+Name:             pairs-oom-k7577
+Namespace:        hw5
+Priority:         0
+Service Account:  default
+Node:             hw5-control-plane/172.21.0.2
+Start Time:       Sat, 14 Nov 2026 00:33:29 +0300
+Labels:           app=pairs-oom
+                  batch.kubernetes.io/controller-uid=4e20dcad-162b-40f1-b3ca-78dfbce9f88f
+                  batch.kubernetes.io/job-name=pairs-oom
+                  controller-uid=4e20dcad-162b-40f1-b3ca-78dfbce9f88f
+                  job-name=pairs-oom
+Annotations:      <none>
+Status:           Failed
+IP:               10.244.0.14
+IPs:
+  IP:           10.244.0.14
+Controlled By:  Job/pairs-oom
+Containers:
+  pairs:
+    Container ID:  containerd://fc23a505f9aaf8eba444fd620d3de1f4e4698ad2469c0e39cef06596de2abde1
+    Image:         hw5-job:local
+    Image ID:      sha256:0a05548124ca24ff6487640a196d576971ac72dcd673af8a7db89ecb6bd1861e
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      single
+      --output-prefix
+      s3://hh-lake/hw5/pairs-oom
+    State:          Terminated
+      Reason:       OOMKilled
+      Exit Code:    137
+      Started:      Sat, 14 Nov 2026 00:33:29 +0300
+      Finished:     Sat, 14 Nov 2026 00:33:30 +0300
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  32Mi
+    Requests:
+      cpu:     500m
+      memory:  16Mi
+    Environment Variables from:
+      s3-config  ConfigMap  Optional: false
+    Environment:
+      S3_ENDPOINT:            http://host.docker.internal:9100
+      AWS_ACCESS_KEY_ID:      hw3admin
+      AWS_SECRET_ACCESS_KEY:  hw3-local-secret
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-z9w76 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   False 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-z9w76:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  12s   default-scheduler  Successfully assigned hw5/pairs-oom-k7577 to hw5-control-plane
+  Normal  Pulled     12s   kubelet            Container image "hw5-job:local" already present on machine and can be accessed by the pod
+  Normal  Created    12s   kubelet            Container created
+  Normal  Started    11s   kubelet            Container started

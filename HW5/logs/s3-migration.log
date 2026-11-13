@@ -1,0 +1,9 @@
+{
+  "source": "http://host.docker.internal:9100",
+  "target": "http://host.docker.internal:9200",
+  "object": "s3://hh-lake/raw/it_vacancies_2024.csv.gz",
+  "bytes": 295480524,
+  "source_sha256": "4109da11358bb5d0269eddb41832865c138db00f2876ba7e884594ee2505e17c",
+  "target_sha256": "4109da11358bb5d0269eddb41832865c138db00f2876ba7e884594ee2505e17c",
+  "identical": true
+}

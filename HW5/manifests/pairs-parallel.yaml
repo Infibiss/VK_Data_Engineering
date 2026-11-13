@@ -1,0 +1,36 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pairs-parallel
+  namespace: hw5
+spec:
+  backoffLimit: 0
+  template:
+    metadata:
+      labels:
+        app: pairs-parallel
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: pairs
+        image: hw5-job:local
+        imagePullPolicy: Never
+        args:
+        - worker
+        - "--shard-prefix"
+        - s3://hh-lake/hw5/shards
+        - "--output-prefix"
+        - s3://hh-lake/hw5/parts
+        envFrom:
+        - configMapRef:
+            name: s3-config
+        resources:
+          requests:
+            cpu: 500m
+            memory: 64Mi
+          limits:
+            cpu: '1'
+            memory: 80Mi
+  completions: 4
+  parallelism: 4
+  completionMode: Indexed

@@ -1,0 +1,52 @@
+Name:             pairs-oom
+Namespace:        hw5
+Selector:         batch.kubernetes.io/controller-uid=4e20dcad-162b-40f1-b3ca-78dfbce9f88f
+Labels:           app=pairs-oom
+                  batch.kubernetes.io/controller-uid=4e20dcad-162b-40f1-b3ca-78dfbce9f88f
+                  batch.kubernetes.io/job-name=pairs-oom
+                  controller-uid=4e20dcad-162b-40f1-b3ca-78dfbce9f88f
+                  job-name=pairs-oom
+Annotations:      <none>
+Parallelism:      1
+Completions:      1
+Completion Mode:  NonIndexed
+Suspend:          false
+Backoff Limit:    0
+Start Time:       Sat, 14 Nov 2026 00:33:29 +0300
+Pods Statuses:    0 Active (0 Ready) / 0 Succeeded / 1 Failed
+Pod Template:
+  Labels:  app=pairs-oom
+           batch.kubernetes.io/controller-uid=4e20dcad-162b-40f1-b3ca-78dfbce9f88f
+           batch.kubernetes.io/job-name=pairs-oom
+           controller-uid=4e20dcad-162b-40f1-b3ca-78dfbce9f88f
+           job-name=pairs-oom
+  Containers:
+   pairs:
+    Image:      hw5-job:local
+    Port:       <none>
+    Host Port:  <none>
+    Args:
+      single
+      --output-prefix
+      s3://hh-lake/hw5/pairs-oom
+    Limits:
+      cpu:     1
+      memory:  32Mi
+    Requests:
+      cpu:     500m
+      memory:  16Mi
+    Environment Variables from:
+      s3-config  ConfigMap  Optional: false
+    Environment:
+      S3_ENDPOINT:            http://host.docker.internal:9100
+      AWS_ACCESS_KEY_ID:      hw3admin
+      AWS_SECRET_ACCESS_KEY:  hw3-local-secret
+    Mounts:                   <none>
+  Volumes:                    <none>
+  Node-Selectors:             <none>
+  Tolerations:                <none>
+Events:
+  Type     Reason                Age    From            Message
+  ----     ------                ----   ----            -------
+  Normal   SuccessfulCreate      7m40s  job-controller  Created pod: pairs-oom-k7577
+  Warning  BackoffLimitExceeded  7m37s  job-controller  Job has reached the specified backoff limit

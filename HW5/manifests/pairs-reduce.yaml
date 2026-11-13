@@ -1,0 +1,33 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pairs-reduce
+  namespace: hw5
+spec:
+  backoffLimit: 0
+  template:
+    metadata:
+      labels:
+        app: pairs-reduce
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: pairs
+        image: hw5-job:local
+        imagePullPolicy: Never
+        args:
+        - reduce
+        - "--parts-prefix"
+        - s3://hh-lake/hw5/parts
+        - "--output-prefix"
+        - s3://hh-lake/hw5/parallel
+        envFrom:
+        - configMapRef:
+            name: s3-config
+        resources:
+          requests:
+            cpu: 500m
+            memory: 64Mi
+          limits:
+            cpu: '1'
+            memory: 80Mi

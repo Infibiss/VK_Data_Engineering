@@ -1,0 +1,7 @@
+NAME               STATUS     COMPLETIONS   DURATION   AGE
+pairs-calibrated   Complete   1/1           12s        3m7s
+pairs-oom          Failed     0/1           4m7s       4m7s
+pairs-parallel     Complete   4/4           7s         2m4s
+pairs-profile      Complete   1/1           12s        4m7s
+pairs-reduce       Complete   1/1           3s         117s
+split              Complete   1/1           30s        2m54s
